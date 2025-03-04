@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <Box position={"sticky"} w={"100%"} height={"auto"} zIndex={10} top={0} bg={"white"}>
-        <Flex justifyContent={"space-between"} alignItems={"center"} py={4} px={{ base: "30px", lg: "70px" }} boxShadow="md" borderTop={"1.75px solid #4d45d6"} >
+        <Flex justifyContent={"space-between"} alignItems={"center"} py={4} px={{ base: "30px", lg: "70px" }} boxShadow="md" borderTop={"1.75px solid #071e37"} >
           <Box>
             <Text my={0} fontSize="28px" color="#4d45d6" fontFamily="Poppins, sans-serif">
               Adini

@@ -45,7 +45,7 @@ export default function BannerSection() {
                 justifyContent="center"
                 alignItems="flex-start"
                 color="white"
-                backgroundImage="url('/assets/banner.png')"
+                backgroundImage="url('/assets/banner.webp')"
                 backgroundSize="cover"
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
