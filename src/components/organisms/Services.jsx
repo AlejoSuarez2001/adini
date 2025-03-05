@@ -1,4 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Service from "../molecules/Service";
 
 const services = [
@@ -38,21 +40,30 @@ const services = [
 ];
 
 export default function Services() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
     <>
       <Heading fontSize={"3xl"} textAlign="center" mt={"50px"} mb={"140px"}>
         Servicios
       </Heading>
-      <Flex justify="center" gap={20} wrap="wrap">
-        {services.map((service, index) => (
-          <Service
-            key={index}
-            title={service.title}
-            image={service.image}
-            serviceList={service.serviceList}
-          />
-        ))}
-      </Flex>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Flex justify="center" gap={{ lg: 10, xl: 20 }} wrap="wrap" mx={10}>
+          {services.map((service, index) => (
+            <Service
+              key={index}
+              title={service.title}
+              image={service.image}
+              serviceList={service.serviceList}
+            />
+          ))}
+        </Flex>
+      </motion.div>
     </>
   );
 }
