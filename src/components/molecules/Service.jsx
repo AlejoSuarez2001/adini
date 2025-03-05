@@ -10,11 +10,12 @@ export default function Service({ title, image, serviceList }) {
       bg="white"
       borderLeft={"1px solid #f3f3f3"}
       borderRight={"1px solid #f3f3f3"}
-      maxW={{ xl: "330px", "2xl": "380px" }}
+      w={{ base: "330px", "2xl": "380px" }}
       textAlign="center"
       borderBottom={"4px solid #6c63ff"}
       transition="transform 0.2s ease-in-out"
       _hover={{ transform: "translateY(-5px)" }}
+      mb={"80px"}
     >
       <Flex justify={"center"} align={"center"}>
         <img

@@ -25,7 +25,7 @@ const theme = extendTheme({
       },
       html: {
         scrollbarWidth: "thin",
-        scrollbarColor: "#272847 #f0f0f0",
+        scrollbarColor: "#071e37 #f7f8ff",
       },
     },
   },
@@ -38,8 +38,10 @@ const theme = extendTheme({
     },
     tertiary: {
       500: "#6c63ff",
+    },
+    quarter: {
+      500: "#f7f8ff",
     }
-
   },
   components: {
     Button: {
@@ -49,8 +51,8 @@ const theme = extendTheme({
           borderRadius: "md",
           bg: "#071e37",
           color: "#f2f2f2",
-          px:"12px",
-          py:"1px",
+          px: "12px",
+          py: "1px",
           _hover: {
             bg: "#f2f2f2",
             borderColor: "#071e37",

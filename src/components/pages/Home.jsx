@@ -4,15 +4,16 @@ import Divider from "../atoms/Divider";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
 import Services from "../organisms/Services";
+import Technologies from "../organisms/Technologies";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 
 export default function Home() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
 
   const handleScroll = () => {
-    const banner = document.getElementById("banner");
-    if (banner) {
-      const { bottom } = banner.getBoundingClientRect();
+    const inicio = document.getElementById("inicio");
+    if (inicio) {
+      const { bottom } = inicio.getBoundingClientRect();
       setIsWhatsAppVisible(bottom < 0);
     }
   };
@@ -27,10 +28,16 @@ export default function Home() {
   return (
     <Box>
       <Header />
-      <Box id="banner">
+      <Box id="inicio">
         <Banner />
       </Box>
-      <Services />
+      <Box id="servicios">
+        <Services />
+      </Box>
+      <Box id="tecnologias">
+        <Technologies />
+      </Box>
+
       <Divider />
 
       <Divider />
