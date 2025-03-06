@@ -49,14 +49,6 @@ export default function Home() {
       <Divider />
 
       <Divider />
-
-      <Divider />
-
-      <Divider />
-
-      <Divider />
-
-      <Divider />
       <Box h={"1000px"}></Box>
       {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
     </Box>

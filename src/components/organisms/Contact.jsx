@@ -9,72 +9,89 @@ import {
   Heading
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { FiExternalLink } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
-  const sendMessage = () => {
-    const defaultMessage = `Hola, soy *${name}*, vengo desde la web d}`;
-    const whatsappUrl = `https://wa.me
-    }?text=${encodeURIComponent(defaultMessage)}`;
-    window.open(whatsappUrl, "_blank");
+  const sendEmail = () => {
+    const subject = `Contacto desde la web - ${name}`;
+    const body = `Hola, mi nombre es ${name}.%0D%0A%0D%0A${message}`;
+    const mailtoLink = `mailto:contacto@tudominio.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, "_blank");
   };
 
   return (
-    <>
-      <Heading fontSize={"3xl"} textAlign="center" mt={"135px"} mb={"60px"}>
+    <Box py={10} px={5}>
+      <Heading fontSize="3xl" textAlign="center" mt="100px" mb="40px" color="#071e37">
         Contacto
       </Heading>
-      <Flex alignItems={"center"} justifyContent={"center"}>
+
+      <Flex alignItems="center" justifyContent="center">
         <Box
-          bg="secondary.500"
+          bg="white"
           p={8}
           borderRadius="lg"
-          width={{ base: "none", md: "800px" }}
+          boxShadow="lg"
+          width={"100%"}
+          maxW={"1000px"}
         >
-          <Text fontSize="xl" fontWeight="bold" color={"#1a365d"} mb={4}>
-            Contáctanos por WhatsApp
+          <Text fontSize="xl" fontWeight="bold" color="#071e37" mb={4}>
+            Envíanos tu mensaje
           </Text>
-          <Text
-            mb={4}
-            color={"#1a365d"}
-            fontSize={{ base: "sm", md: "md", lg: "lg" }}
-          >
-            Envíanos tu consulta y te contactaremos:
-          </Text>
+
           <Flex direction="column" gap={4}>
             <Input
-              placeholder="Ingrese su nombre"
+              placeholder="Tu nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              bg="white"
-              color="#1a365d"
+              bg="#f2f2f2"
+              color="#071e37"
+              border="none"
+              _focus={{ border: "2px solid #6c63ff" }}
+            />
+            <Input
+              type="email"
+              placeholder="Tu correo electrónico"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              bg="#f2f2f2"
+              color="#071e37"
+              border="none"
+              _focus={{ border: "2px solid #6c63ff" }}
             />
             <Textarea
-              placeholder="Escriba su mensaje..."
+              placeholder="Escribe tu mensaje..."
               size="md"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              bg="white"
-              color="#1a365d"
+              bg="#f2f2f2"
+              color="#071e37"
               resize="vertical"
               maxHeight="200px"
+              border="none"
+              _focus={{ border: "2px solid #6c63ff" }}
             />
-            <Flex justifyContent={"end"}>
+            <Flex justifyContent="space-between" align={"center"}>
+              <Text fontSize="xl" fontWeight="bold" color="#071e37" m={0}>
+                ¡Gracias por confiar en nosotros!
+              </Text>
               <Button
-                colorScheme="green"
-                onClick={sendMessage}
-                isDisabled={!message.trim() || !name.trim()}
-                rightIcon={<Icon as={FiExternalLink} />}
+                bg="#6c63ff"
+                color="white"
+                _hover={{ bg: "#5548e2" }}
+                onClick={sendEmail}
+                isDisabled={!message.trim() || !name.trim() || !email.trim()}
+                rightIcon={<Icon as={FiSend} />}
               >
-                Consultar por WhatsApp
+                Enviar mensaje
               </Button>
             </Flex>
           </Flex>
         </Box>
       </Flex>
-    </>
+    </Box>
   );
-};
+}
