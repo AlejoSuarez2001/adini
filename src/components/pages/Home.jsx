@@ -5,6 +5,8 @@ import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
 import Services from "../organisms/Services";
 import Technologies from "../organisms/Technologies";
+import AboutUs from "../organisms/AboutUs";
+import Contact from "../organisms/Contact";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 
 export default function Home() {
@@ -26,7 +28,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Box>
+    <Box bg={"quarter.500"}>
       <Header />
       <Box id="inicio">
         <Banner />
@@ -36,6 +38,12 @@ export default function Home() {
       </Box>
       <Box id="tecnologias">
         <Technologies />
+      </Box>
+      <Box id="contacto">
+        <Contact />
+      </Box>
+      <Box id="nosotros">
+        <AboutUs />
       </Box>
 
       <Divider />

@@ -1,4 +1,5 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Icon } from "@chakra-ui/react";
+import { FaDesktop, FaMobileAlt } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -48,6 +49,9 @@ export default function Technologies() {
     const getMargin = () => {
         return window.innerWidth <= 780 ? "0" : "0 13%";
     };
+    const getDisplay = () => {
+        return window.innerWidth <= 1000 ? "none" : "auto";
+    };
 
     return (
         <>
@@ -55,8 +59,74 @@ export default function Technologies() {
                 Tecnologías
             </Heading>
 
-            <Box bg="primary.500" p={8} textAlign="center">
-                <Box h={400} color={"white"}> Comming Soon...</Box>
+            <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4} boxShadow="xl">
+                <img
+                    src={"/assets/flechas.png"}
+                    style={{ display: getDisplay(), position: "absolute", top: "-80px", right: "80px", width: "165px" }}
+                />
+                <Box py={10} px={{ base: 4, md: 10, lg: 10, xl: "9%" }} color="white">
+                    <Flex direction="column" gap={10}>
+                        <Flex
+                            justify={{ base: "center", md: "start" }}
+                            align="center"
+                            gap={6}
+                            px={4}
+                            direction={{ base: "column", md: "row" }}
+                        >
+                            <Box
+                                bg="whiteAlpha.200"
+                                p={4}
+                                borderRadius="full"
+                                boxShadow="lg"
+                                display="flex"
+                                justifyContent="center"
+                                alignItems="center"
+                                mb={{ base: 4, md: 0 }}
+                            >
+                                <Icon as={FaDesktop} w={{ base: 16, md: 24 }} h={{ base: 16, md: 24 }} color="white" />
+                            </Box>
+                            <Box ml={{ base: 0, md: 6 }} textAlign={{ base: "center", md: "left" }} maxW="500px">
+                                <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={2}>
+                                    Desarrollo Web
+                                </Text>
+                                <Box h={"1px"} bg={"white"} mb={4} />
+                                <Text fontSize={{ base: "sm", md: "md" }} color="gray.300">
+                                    Desarrollamos sitios web rápidos, interactivos y optimizados para todo tipo de dispositivos, utilizando tecnologías como React, Next.js y Express para ofrecer experiencias de usuario excepcionales y alto rendimiento.
+                                </Text>
+                            </Box>
+                        </Flex>
+
+                        <Flex
+                            justify={{ base: "center", md: "end" }}
+                            align="center"
+                            gap={{ base: 6, lg: 10 }}
+                            direction={{ base: "column", md: "row-reverse" }}
+                            px={4}
+                        >
+                            <Box
+                                bg="whiteAlpha.200"
+                                p={4}
+                                borderRadius="full"
+                                boxShadow="lg"
+                                display="flex"
+                                justifyContent="center"
+                                alignItems="center"
+                                mb={{ base: 4, md: 0 }}
+                            >
+                                <Icon as={FaMobileAlt} w={{ base: 16, md: 24 }} h={{ base: 16, md: 24 }} color="white" />
+                            </Box>
+                            <Box ml={{ base: 0, md: 6 }} textAlign={{ base: "center", md: "right" }} maxW="500px">
+                                <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={2}>
+                                    Desarrollo Móvil
+                                </Text>
+                                <Box h={"1px"} bg={"white"} mb={4} />
+                                <Text fontSize={{ base: "sm", md: "md" }} color="gray.300">
+                                    Creemos aplicaciones móviles nativas y híbridas con Expo y React Native, optimizadas para ofrecer un rendimiento rápido y una experiencia fluida en dispositivos móviles.
+                                </Text>
+                            </Box>
+                        </Flex>
+                    </Flex>
+                </Box>
                 <Slider
                     {...sliderSettings}
                     style={{
@@ -64,19 +134,22 @@ export default function Technologies() {
                         marginBottom: "-110px",
                         borderRadius: "0.125rem",
                         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                        backgroundColor: "#f7f8ff",
+                        backgroundColor: "#ffffff",
                         paddingBlock: "20px",
-                    }}
-                    css={{
-                        "@media (min-width: 780px)": {
-                            margin: "0",
-                        },
                     }}
                 >
                     {techStack.map((tech, index) => (
                         <Flex key={index} textAlign="center" p={4}>
                             <Flex align={"center"} justify={"center"}>
-                                <img src={tech.icon} alt={tech.name} style={{ width: "50px", height: "50px" }} />
+                                <img
+                                    src={tech.icon}
+                                    alt={tech.name}
+                                    style={{
+                                        width: "50px",
+                                        height: "50px",
+                                        filter: "drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2))"
+                                    }}
+                                />
                             </Flex>
                             <Text fontSize={{ base: "xs", md: "md" }} fontWeight="bold" color="#0a0a0a" mt={4} mb={2}>
                                 {tech.name}

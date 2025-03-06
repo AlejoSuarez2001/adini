@@ -27,7 +27,7 @@ export default function Header() {
         </Box>
 
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
-          {['inicio', 'servicios', 'proyectos', 'tecnologias', 'nosotros'].map((section) => (
+          {['inicio', 'servicios', 'tecnologias', 'proyectos', 'nosotros'].map((section) => (
             <Text key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{ color: "tertiary.500", cursor: "pointer" }}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Text>
@@ -63,7 +63,7 @@ export default function Header() {
             <DrawerHeader>Menú</DrawerHeader>
             <DrawerBody>
               <VStack spacing={4} align="start">
-                {['inicio', 'servicios', 'proyectos', 'tecnologias', 'nosotros', 'contacto'].map((section) => (
+                {['inicio', 'servicios', 'tecnologias', 'proyectos', 'nosotros', 'contacto'].map((section) => (
                   <Text key={section} as="button" onClick={() => scrollToSection(section)} fontSize="lg" _hover={{ color: "tertiary.500", cursor: "pointer" }}>
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </Text>

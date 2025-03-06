@@ -7,7 +7,7 @@ export default function Service({ title, image, serviceList }) {
       p={6}
       boxShadow="lg"
       borderRadius="md"
-      bg="white"
+      bg="linear-gradient(to top, white, #f7f8ff)"
       borderLeft={"1px solid #f3f3f3"}
       borderRight={"1px solid #f3f3f3"}
       w={{ base: "330px", "2xl": "380px" }}

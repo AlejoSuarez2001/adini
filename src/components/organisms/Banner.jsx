@@ -29,6 +29,18 @@ const testimonialVariants = {
 export default function BannerSection() {
     const [index, setIndex] = useState(0);
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const offset = 120;
+            const top = section.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({
+                top: top,
+                behavior: "smooth",
+            });
+        }
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -83,20 +95,19 @@ export default function BannerSection() {
                         <Text fontSize={{ base: "md", md: "lg" }} opacity={0.9}>
                             Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.
                         </Text>
-                        <a href="#contacto">
-                            <Button
-                                variant="solid"
-                                bg="tertiary.500"
-                                color="secondary.500"
-                                fontSize="md"
-                                _hover={{
-                                    transform: "scale(1.05)",
-                                    bg: "#5548e6",
-                                }}
-                            >
-                                Contáctanos
-                            </Button>
-                        </a>
+                        <Button
+                            variant="solid"
+                            bg="tertiary.500"
+                            color="secondary.500"
+                            fontSize="md"
+                            _hover={{
+                                transform: "scale(1.05)",
+                                bg: "#5548e6",
+                            }}
+                            onClick={() => scrollToSection("contacto")}
+                        >
+                            Contáctanos
+                        </Button>
                     </VStack>
                     <Flex display={{ base: "none", lg: "flex" }} gap={6} flexDir={"column"} w={"700px"} align={"center"} justify={"center"}>
                         <Flex
