@@ -2,6 +2,8 @@ import { Box, Flex, Text, Icon } from "@chakra-ui/react";
 import { FaDesktop, FaMobileAlt } from "react-icons/fa";
 import Title from "../molecules/Title";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -54,15 +56,29 @@ export default function Technologies() {
         return window.innerWidth <= 1000 ? "none" : "auto";
     };
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
     return (
         <>
             <Title title="Herramientas" subtitle="que impulsan tu éxito" mb="50px" />
 
             <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4} boxShadow="xl">
-                <img
-                    src={"/assets/flechas.png"}
-                    style={{ display: getDisplay(), position: "absolute", top: "-80px", right: "80px", width: "165px" }}
-                />
+                <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
+                    transition={{ duration: 0.8 }}
+                    style={{ display: getDisplay(), position: "absolute", top: "-70px", right: "80px", width: "140px" }}
+                >
+                    <img
+                        src={"/assets/flechas.png"}
+                    />
+                </motion.div>
+
+
                 <Box py={10} px={{ base: 4, md: 10, lg: 10, xl: "9%" }} color="white">
                     <Flex direction="column" gap={10}>
                         <Flex
