@@ -5,11 +5,11 @@ import {
   Text,
   Textarea,
   Input,
-  Icon,
-  Heading
+  Icon
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
+import Title from "../molecules/Title";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
@@ -24,10 +24,8 @@ export default function Contact() {
   };
 
   return (
-    <Box py={10} px={5}>
-      <Heading fontSize="3xl" textAlign="center" mt="100px" mb="40px" color="#071e37">
-        Contacto
-      </Heading>
+    <>
+      <Title title="Contáctanos" subtitle="para poder ayudarte" mt="60px" mb="40px" />
 
       <Flex alignItems="center" justifyContent="center">
         <Box
@@ -92,6 +90,6 @@ export default function Contact() {
           </Flex>
         </Box>
       </Flex>
-    </Box>
+    </>
   );
 }

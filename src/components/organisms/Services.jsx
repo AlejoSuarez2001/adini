@@ -1,4 +1,5 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Title from "../molecules/Title";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Service from "../molecules/Service";
@@ -44,9 +45,7 @@ export default function Services() {
 
   return (
     <>
-      <Heading fontSize={"3xl"} textAlign="center" mt={"50px"} mb={"140px"}>
-        Servicios
-      </Heading>
+      <Title title="Soluciones" subtitle="a medida para tu negocio" mt={"50px"} mb="140px" />
 
       <motion.div
         ref={ref}

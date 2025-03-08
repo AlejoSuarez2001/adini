@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Text, Icon } from "@chakra-ui/react";
+import { Box, Flex, Text, Icon } from "@chakra-ui/react";
 import { FaDesktop, FaMobileAlt } from "react-icons/fa";
+import Title from "../molecules/Title";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -55,9 +56,7 @@ export default function Technologies() {
 
     return (
         <>
-            <Heading fontSize={"3xl"} textAlign="center" mb={"50px"}>
-                Tecnologías
-            </Heading>
+            <Title title="Herramientas" subtitle="que impulsan tu éxito" mb="50px" />
 
             <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4} boxShadow="xl">
                 <img

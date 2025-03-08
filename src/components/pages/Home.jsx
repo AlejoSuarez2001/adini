@@ -7,6 +7,7 @@ import Services from "../organisms/Services";
 import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
+import Portfolio from "../organisms/Portfolio";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 
 export default function Home() {
@@ -38,6 +39,9 @@ export default function Home() {
       </Box>
       <Box id="tecnologias">
         <Technologies />
+      </Box>
+      <Box id="proyectos">
+        <Portfolio />
       </Box>
       <Box id="contacto">
         <Contact />

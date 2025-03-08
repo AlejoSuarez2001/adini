@@ -1,4 +1,5 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import Title from "../molecules/Title";
 
 const teamMembers = [
     {
@@ -41,9 +42,7 @@ const teamMembers = [
 export default function AboutUs() {
     return (
         <>
-            <Heading fontSize={"3xl"} textAlign="center" my={"60px"}>
-                Nosotros
-            </Heading>
+            <Title title="Nuestro equipo" subtitle="comprometido con tu éxito" mt="60px" mb="60px" />
 
             <Flex align={"center"} justify={"center"}>
                 <Box maxW={"1200px"} textAlign="center" mx={"50px"}>
