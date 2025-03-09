@@ -14,7 +14,7 @@ export default function Title({ title, subtitle, mt, mb }) {
             align={"center"}
             justify={{ base: "center", md: "left" }}
             textAlign={{ base: "center", md: "left" }}
-            mx={{ base: "15px", md: "10%" }}
+            mx={{ base: "20px", md: "10%" }}
             mb={mb}
             mt={mt}
             ref={ref}

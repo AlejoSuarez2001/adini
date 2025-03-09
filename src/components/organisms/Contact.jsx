@@ -40,7 +40,9 @@ export default function Contact() {
               bg="white"
               p={8}
               pl={{ base: 8, lg: "15%" }}
-              borderRadius="md"
+              borderRadius={{ base: "none", lg: "md" }}
+              borderTopLeftRadius={"none"}
+              borderBottomLeftRadius={"none"}
               boxShadow="md"
               w={"100%"}
             >
@@ -112,7 +114,7 @@ export default function Contact() {
           </Flex>
         </motion.div>
         <Flex display={{ base: "none", lg: "inherit" }} align={"center"} justify={"center"}>
-          <Box mx={{ base: "60px", xl: "140px" }} w={{ base: 350, xl: 400 }}>
+          <Box mx={{ base: "40px", "2xl": "120px" }} w={{ base: 350, xl: 400 }}>
             <Image
               src="/assets/contact.svg"
             />

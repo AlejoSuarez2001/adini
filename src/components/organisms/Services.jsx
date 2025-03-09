@@ -3,6 +3,7 @@ import Title from "../molecules/Title";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Service from "../molecules/Service";
+import { useMemo } from "react";
 
 const services = [
   {
@@ -41,11 +42,13 @@ const services = [
 ];
 
 export default function Services() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const threshold = useMemo(() => (window.innerWidth < 768 ? 0.1 : 0.2), []);
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
   return (
     <>
-      <Title title="Soluciones" subtitle="a medida para tu negocio" mt={"50px"} mb="140px" />
+      <Title title="Soluciones" subtitle="a medida para tu negocio" mt="50px" mb="140px" />
 
       <motion.div
         ref={ref}
@@ -55,12 +58,7 @@ export default function Services() {
       >
         <Flex justify="center" gap={{ base: 12, xl: 20 }} wrap="wrap" mx={10}>
           {services.map((service, index) => (
-            <Service
-              key={index}
-              title={service.title}
-              image={service.image}
-              serviceList={service.serviceList}
-            />
+            <Service key={index} title={service.title} image={service.image} serviceList={service.serviceList} />
           ))}
         </Flex>
       </motion.div>

@@ -65,7 +65,7 @@ export default function Technologies() {
         <>
             <Title title="Herramientas" subtitle="que impulsan tu éxito" mb="50px" />
 
-            <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4} boxShadow="xl">
+            <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4}>
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, x: 100 }}
@@ -147,7 +147,7 @@ export default function Technologies() {
                     style={{
                         margin: getMargin(),
                         marginBottom: "-110px",
-                        borderRadius: "0.125rem",
+                        borderRadius: "0.250rem",
                         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
                         backgroundColor: "#ffffff",
                         paddingBlock: "20px",

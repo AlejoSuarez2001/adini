@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
-import Divider from "../atoms/Divider";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
 import Services from "../organisms/Services";
@@ -8,6 +7,7 @@ import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
 import Portfolio from "../organisms/Portfolio";
+import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 
 export default function Home() {
@@ -49,11 +49,7 @@ export default function Home() {
       <Box id="nosotros">
         <AboutUs />
       </Box>
-
-      <Divider />
-
-      <Divider />
-      <Box h={"1000px"}></Box>
+      <Footer />
       {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
     </Box>
   );
