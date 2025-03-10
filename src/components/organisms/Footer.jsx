@@ -30,7 +30,7 @@ export default function Footer() {
                 textAlign={{ base: "center", md: "left" }}
             >
                 <GridItem>
-                    <Text fontSize="2xl" color="white">
+                    <Text fontSize="2xl" color="white" fontFamily="Poppins, sans-serif">
                         {information.name}
                     </Text>
                     <Text fontSize="sm" mt={2} mb={0} maxW={{ base: "auto", md: "450px" }}>

@@ -1,11 +1,9 @@
 import React from "react";
-import { Flex, Heading, Box, Button } from "@chakra-ui/react";
+import { Flex, Button, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-
 
 export default function NotFound() {
   const navigate = useNavigate();
-  
 
   const goHome = () => {
     navigate("/");
@@ -20,19 +18,19 @@ export default function NotFound() {
       w="100vw"
       p={3}
     >
-      <Heading as="h1" fontSize={48} font color="primary">
-        {information?.name}
-      </Heading>
-      <h2>404 - Página No Encontrada</h2>
+      <Text my={0} fontSize="5xl" color="#4d45d6" fontFamily="Poppins, sans-serif">
+        Adini
+      </Text>
+      <h2 style={{ textAlign: "center" }}>404 - Página No Encontrada</h2>
       <p style={{ textAlign: "center" }}>
         Lo sentimos, no hemos podido encontrar la página que buscas.
       </p>
       <Button
-        bg="gray.600"
-        color="white"
-        fontSize={{ base: "sm", md: "md" }}
-        _hover={{ bg: "gray.700" }}
-        mt={1}
+        variant="solid"
+        bg="tertiary.500"
+        color="secondary.500"
+        fontSize="md"
+        _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
         onClick={goHome}
       >
         Volver al Inicio
