@@ -5,37 +5,37 @@ const teamMembers = [
     {
         name: "Agustín Acevedo",
         role: "Graphic Designer",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Alejo Suarez",
         role: "Soft - Engineer",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Gabriel Olivieri",
         role: "Web Developer",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Juan Ignacio Diaz",
         role: "Product Manager",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Gonzalo Suarez",
         role: "Soft - Engineer",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Daniel Piñero",
         role: "Web Developer",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     },
     {
         name: "Guido Gelván",
         role: "Product Manager",
-        image: "/assets/user.jpeg",
+        image: "/assets/images/user.jpeg",
     }
 ];
 

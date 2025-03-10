@@ -116,7 +116,7 @@ export default function Contact() {
         <Flex display={{ base: "none", lg: "inherit" }} align={"center"} justify={"center"}>
           <Box mx={{ base: "40px", "2xl": "120px" }} w={{ base: 350, xl: 400 }}>
             <Image
-              src="/assets/contact.svg"
+              src="/assets/icons/contact.svg"
             />
           </Box>
         </Flex>

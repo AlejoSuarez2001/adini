@@ -8,19 +8,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const techStack = [
-    { name: "Docker", icon: "/assets/docker.webp" },
-    { name: "Expo", icon: "/assets/expo.webp" },
-    { name: "Chakra UI", icon: "/assets/chakra.webp" },
-    { name: "Express", icon: "/assets/express.webp" },
-    { name: "Material UI", icon: "/assets/material.webp" },
-    { name: "MongoDB", icon: "/assets/mongo.webp" },
-    { name: "Next.js", icon: "/assets/next.webp" },
-    { name: "Node.js", icon: "/assets/node.webp" },
-    { name: "React", icon: "/assets/react.webp" },
-    { name: "Sequelize", icon: "/assets/sequelize.webp" },
-    { name: "SQL", icon: "/assets/sql.webp" },
-    { name: "WordPress", icon: "/assets/wordpress.webp" },
-    { name: "TypeScript", icon: "/assets/ts.webp" },
+    { name: "Docker", icon: "/assets/icons/docker.webp" },
+    { name: "Expo", icon: "/assets/icons/expo.webp" },
+    { name: "Chakra UI", icon: "/assets/icons/chakra.webp" },
+    { name: "Express", icon: "/assets/icons/express.webp" },
+    { name: "Material UI", icon: "/assets/icons/material.webp" },
+    { name: "MongoDB", icon: "/assets/icons/mongo.webp" },
+    { name: "Next.js", icon: "/assets/icons/next.webp" },
+    { name: "Node.js", icon: "/assets/icons/node.webp" },
+    { name: "React", icon: "/assets/icons/react.webp" },
+    { name: "Sequelize", icon: "/assets/icons/sequelize.webp" },
+    { name: "SQL", icon: "/assets/icons/sql.webp" },
+    { name: "WordPress", icon: "/assets/icons/wordpress.webp" },
+    { name: "TypeScript", icon: "/assets/icons/ts.webp" },
 ];
 
 const sliderSettings = {
@@ -74,7 +74,7 @@ export default function Technologies() {
                     style={{ display: getDisplay(), position: "absolute", top: "-70px", right: "80px", width: "140px" }}
                 >
                     <img
-                        src={"/assets/flechas.png"}
+                        src={"/assets/icons/flechas.png"}
                     />
                 </motion.div>
 

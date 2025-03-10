@@ -8,7 +8,7 @@ import { useMemo } from "react";
 const services = [
   {
     title: "Análisis Desarrollo",
-    image: "/assets/dev.svg",
+    image: "/assets/icons/dev.svg",
     serviceList: [
       "Desarrollo de Aplicaciones Web",
       "Desarrollo de E-commerce",
@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: "Business Intelligence",
-    image: "/assets/bi.svg",
+    image: "/assets/icons/bi.svg",
     serviceList: [
       "Migración a la Nube",
       "Administración de Servidores",
@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: "DevOps Infraestructura",
-    image: "/assets/devops.svg",
+    image: "/assets/icons/devops.svg",
     serviceList: [
       "Asesoría en Transformación Digital",
       "Optimización de Procesos TI",
