@@ -59,9 +59,9 @@ export default function Header() {
 
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay bg="rgba(0, 0, 0, 0.4)" />
-          <DrawerContent bg="white" borderLeftRadius="lg" p={4}>
+          <DrawerContent bg="white" p={4}>
             <DrawerCloseButton size="lg" color="gray.600" _hover={{ color: "black" }} />
-            <DrawerHeader px={6} fontSize="2xl" fontWeight="bold" color="gray.700">
+            <DrawerHeader px={6} fontSize="xl" fontWeight="bold" color="gray.700">
               Menú
             </DrawerHeader>
 
@@ -69,14 +69,14 @@ export default function Header() {
 
             <DrawerBody>
               <Flex direction="column" justify={"space-between"} h={"100%"}>
-                <Flex direction="column" gap={5}>
+                <Flex direction="column" gap={6}>
                   {["inicio", "servicios", "tecnologias", "proyectos", "nosotros"].map((section) => (
                     <Text
                       key={section}
                       as="button"
                       textAlign={"left"}
                       onClick={() => scrollToSection(section)}
-                      fontSize="lg"
+                      fontSize="md"
                       fontWeight="medium"
                       color="gray.700"
                       transition="0.3s ease-in-out"
@@ -93,9 +93,9 @@ export default function Header() {
                     variant="solid"
                     bg="tertiary.500"
                     color="white"
-                    fontSize="md"
+                    fontSize="sm"
                     w="full"
-                    py={6}
+                    p={0}
                     _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
                     onClick={() => scrollToSection("contacto")}
                   >

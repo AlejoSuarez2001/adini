@@ -93,7 +93,7 @@ export default function Contact() {
                   p={4}
                 />
                 <Flex justifyContent="space-between" align="center">
-                  <Text fontSize="lg" color="#6c63ff" fontWeight="bold">
+                  <Text m={0} fontSize="lg" color="#6c63ff" fontWeight="bold">
                     ¡Gracias por confiar en nosotros!
                   </Text>
                   <Button
