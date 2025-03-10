@@ -20,8 +20,8 @@ export default function Title({ title, subtitle, mt, mb }) {
             ref={ref}
         >
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
                 transition={{ duration: 0.8 }}
             >
                 <Heading fontSize={{ base: "2xl", "2xl": "25px" }} color="primary.500">

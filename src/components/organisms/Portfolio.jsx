@@ -55,14 +55,14 @@ export default function Portfolio() {
             <Title title="Principales" subtitle="proyectos realizados" mt="130px" mb="40px" />
 
             <Box maxW="7xl" mx="auto" px={6}>
-                <Heading textAlign="left" fontSize="3xl" my={12} color="purple.600">Desarrollo Web</Heading>
+                <Heading textAlign="center" fontSize="3xl" my={12} color="primary.500">Desarrollo Web</Heading>
                 <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
                     {webProjects.map((project, index) => (
                         <WebProyect key={index} video={project.video} title={project.title} text={project.text} />
                     ))}
                 </Flex>
 
-                <Heading textAlign="left" fontSize="3xl" my={12} color="purple.600">Desarrollo Móvil</Heading>
+                <Heading textAlign="center" fontSize="3xl" my={12} color="primary.500">Desarrollo Móvil</Heading>
                 <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
                     {mobileProjects.map((project, index) => (
                         <MobileProyect key={index} video1={project.video1} video2={project.video2} title={project.title} text={project.text} />
