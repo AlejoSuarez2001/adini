@@ -21,7 +21,7 @@ const WhatsAppIcon = ({ position }) => {
         _hover={{ bg: "#24a755" }}
       >
         <img
-          src="/assets/whatsappIcon.png"
+          src="/assets/icons/whatsappIcon.png"
           alt="WhatsApp"
           style={{ width: "70%", height: "70%" }}
         />
