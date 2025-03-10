@@ -1,12 +1,15 @@
 import { Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { useBreakpointValue } from '@chakra-ui/react';
 
 export default function Title({ title, subtitle, mt, mb }) {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.3,
     });
+
+    const xValue = useBreakpointValue({ base: -10, md: -100 });
 
     return (
         <Flex
@@ -20,8 +23,8 @@ export default function Title({ title, subtitle, mt, mb }) {
             ref={ref}
         >
             <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+                initial={{ opacity: 0, x: xValue }}
+                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : xValue }}
                 transition={{ duration: 0.8 }}
             >
                 <Heading fontSize={{ base: "2xl", "2xl": "25px" }} color="primary.500">

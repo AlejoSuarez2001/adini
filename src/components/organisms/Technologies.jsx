@@ -69,7 +69,7 @@ export default function Technologies() {
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
+                    animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 80 }}
                     transition={{ duration: 0.8 }}
                     style={{ display: getDisplay(), position: "absolute", top: "-70px", right: "80px", width: "140px" }}
                 >

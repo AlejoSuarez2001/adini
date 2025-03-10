@@ -29,28 +29,30 @@ export default function Home() {
   }, []);
 
   return (
-    <Box bg={"quarter.500"}>
+    <>
       <Header />
-      <Box id="inicio">
-        <Banner />
+      <Box bg={"quarter.500"} overflowX={"hidden"}>
+        <Box id="inicio">
+          <Banner />
+        </Box>
+        <Box id="servicios">
+          <Services />
+        </Box>
+        <Box id="tecnologias">
+          <Technologies />
+        </Box>
+        <Box id="proyectos">
+          <Portfolio />
+        </Box>
+        <Box id="contacto">
+          <Contact />
+        </Box>
+        <Box id="nosotros">
+          <AboutUs />
+        </Box>
+        <Footer />
+        {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
       </Box>
-      <Box id="servicios">
-        <Services />
-      </Box>
-      <Box id="tecnologias">
-        <Technologies />
-      </Box>
-      <Box id="proyectos">
-        <Portfolio />
-      </Box>
-      <Box id="contacto">
-        <Contact />
-      </Box>
-      <Box id="nosotros">
-        <AboutUs />
-      </Box>
-      <Footer />
-      {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
-    </Box>
+    </>
   );
 }
