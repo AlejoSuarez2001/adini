@@ -5,7 +5,7 @@ const WhatsAppIcon = ({ position }) => {
   
 
   return (
-    <Link to={`https://wa.me/1100000000`} target="_blank">
+    <Link to={`https://wa.me/5491155246481`} target="_blank">
       <Box
         position={position}
         bottom="20px"

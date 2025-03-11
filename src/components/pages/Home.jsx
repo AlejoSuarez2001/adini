@@ -38,7 +38,7 @@ export default function Home() {
         <Box id="servicios">
           <Services />
         </Box>
-        <Box id="tecnologias">
+        <Box id="tecnologías">
           <Technologies />
         </Box>
         <Box id="proyectos">

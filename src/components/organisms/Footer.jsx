@@ -6,7 +6,7 @@ export default function Footer() {
         name: "Adini",
         email: "contacto@adini.com",
         instagram: "https://www.instagram.com/adini",
-        linkedin: "https://www.linkedin.com/company/adini",
+        linkedin: "https://www.linkedin.com/in/adini-undefined-985241327/",
         twitter: "https://twitter.com/adini",
     };
 
@@ -44,7 +44,7 @@ export default function Footer() {
                     <Text fontWeight="bold" color="white" mb={3}>Empresa</Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
                         <Link onClick={() => scrollToSection("servicios")} _hover={{ color: "white" }}>Servicios</Link>
-                        <Link onClick={() => scrollToSection("tecnologias")} _hover={{ color: "white" }}>Tecnologías</Link>
+                        <Link onClick={() => scrollToSection("tecnologías")} _hover={{ color: "white" }}>Tecnologías</Link>
                         <Link onClick={() => scrollToSection("proyectos")} _hover={{ color: "white" }}>Proyectos</Link>
                         <Link onClick={() => scrollToSection("nosotros")} _hover={{ color: "white" }}>Nosotros</Link>
 

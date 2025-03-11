@@ -1,12 +1,13 @@
 import { useRef, useEffect, useState } from "react";
-import { Box, Flex, Text, Heading, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import { ViewIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import ModalPortfolio from "./ModalPortfolio";
 
 const MotionBox = motion(Flex);
 
-export default function WebProyect({ title, text, video }) {
+export default function WebProyect({ title, summary, description, video, imgs }) {
     const videoRef = useRef(null);
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -55,7 +56,7 @@ export default function WebProyect({ title, text, video }) {
             >
                 <Box>
                     <Flex justify="center" align="center" mb={3}>
-                        <Heading fontSize="2xl" fontWeight="0" color="gray.700" px={1} py={2}>{title}</Heading>
+                        <Heading fontSize="2xl" fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
                     <Box mb={4} rounded="md" overflow="hidden" boxShadow="md">
                         <video ref={videoRef} autoPlay muted loop style={{ width: "100%", borderRadius: "8px" }}>
@@ -63,7 +64,7 @@ export default function WebProyect({ title, text, video }) {
                         </video>
                     </Box>
                     <Box p={4} pb={0}>
-                        <Text fontSize="md" color="gray.600" mb={4}>{text}</Text>
+                        <Text fontSize="md" color="gray.600" mb={4}>{summary}</Text>
                     </Box>
                 </Box>
                 <Flex mt={6} justify="flex-end">
@@ -82,18 +83,7 @@ export default function WebProyect({ title, text, video }) {
                 </Flex>
             </MotionBox>
 
-            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                <ModalOverlay />
-                <ModalContent p={5}>
-                    <ModalHeader>{title}</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Text mb={4}>{text}</Text>
-                        <Text textAlign={"center"} fontWeight={"bold"} my={20}>Imágenes del Proyecto</Text>
-                    </ModalBody>
-                </ModalContent>
-            </Modal>
-
+            <ModalPortfolio isOpen={isOpen} setIsOpen={setIsOpen} title={title} description={description} imgs={imgs} />
         </>
     );
 }

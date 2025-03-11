@@ -28,7 +28,7 @@ export default function Header() {
         </Box>
 
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
-          {['inicio', 'servicios', 'tecnologias', 'proyectos', 'nosotros'].map((section) => (
+          {['inicio', 'servicios', 'tecnologías', 'proyectos', 'nosotros'].map((section) => (
             <Text key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{ color: "tertiary.500", cursor: "pointer" }}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Text>
@@ -70,7 +70,7 @@ export default function Header() {
             <DrawerBody>
               <Flex direction="column" justify={"space-between"} h={"100%"}>
                 <Flex direction="column" gap={6}>
-                  {["inicio", "servicios", "tecnologias", "proyectos", "nosotros"].map((section) => (
+                  {["inicio", "servicios", "tecnologías", "proyectos", "nosotros"].map((section) => (
                     <Text
                       key={section}
                       as="button"

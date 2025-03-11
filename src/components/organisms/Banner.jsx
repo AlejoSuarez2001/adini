@@ -7,7 +7,7 @@ import { FiCode } from "react-icons/fi";
 const testimonials = [
     "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
     "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
-    "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos a asegurándose de que todo estuviera listo a tiempo."
+    "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
 ];
 
 const floatingVariants = {
