@@ -4,38 +4,38 @@ import Title from "../molecules/Title";
 const teamMembers = [
     {
         name: "Agustín Acevedo",
-        role: "Graphic Designer",
-        image: "/assets/images/user.jpeg",
+        role: "Devops | Sysadmin",
+        image: "/assets/images/agus.png",
     },
     {
         name: "Alejo Suarez",
-        role: "Soft - Engineer",
-        image: "/assets/images/user.jpeg",
+        role: "Analyst | Developer",
+        image: "/assets/images/ale.png",
     },
     {
         name: "Gabriel Olivieri",
-        role: "Web Developer",
-        image: "/assets/images/user.jpeg",
+        role: "Analyst | Developer | DevOps",
+        image: "/assets/images/gabi.png",
     },
     {
         name: "Juan Ignacio Diaz",
-        role: "Product Manager",
-        image: "/assets/images/user.jpeg",
+        role: "Developer | Business Intelligence",
+        image: "/assets/images/juani.png",
     },
     {
         name: "Gonzalo Suarez",
-        role: "Soft - Engineer",
-        image: "/assets/images/user.jpeg",
+        role: "Analyst | Developer",
+        image: "/assets/images/gon.png",
     },
     {
         name: "Daniel Piñero",
-        role: "Web Developer",
-        image: "/assets/images/user.jpeg",
+        role: "Devops | Sysadmin",
+        image: "/assets/images/dani.png",
     },
     {
         name: "Guido Gelván",
-        role: "Product Manager",
-        image: "/assets/images/user.jpeg",
+        role: "Analyst | Developer",
+        image: "/assets/images/guido.png",
     }
 ];
 
