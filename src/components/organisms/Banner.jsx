@@ -90,7 +90,7 @@ export default function BannerSection() {
                             </Text>
                         </HStack>
                         <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold" lineHeight="1.2">
-                            Transformamos ideas en soluciones tecnológicas
+                            Transformamos ideas en soluciones informáticas
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} opacity={0.9}>
                             Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.

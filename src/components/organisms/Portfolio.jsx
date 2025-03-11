@@ -6,6 +6,8 @@ import credencial1 from "../../portfolio/credencial/credencial1.webm";
 import credencial2 from "../../portfolio/credencial/credencial2.webm";
 import ripApp1 from "../../portfolio/rip-app/ripapp1.webm";
 import ripApp2 from "../../portfolio/rip-app/ripapp2.webm";
+import amigosCole1 from "../../portfolio/amigos-cole/amigoscole1.webm";
+import amigosCole2 from "../../portfolio/amigos-cole/amigoscole2.webm";
 import sia from "../../portfolio/sia/sia.webm";
 import samay from "../../portfolio/samay/samay.webm";
 import pap from "../../portfolio/pap/pap.webm";
@@ -15,7 +17,7 @@ const webProjects = [
     {
         video: sia,
         title: "Sistema Integrado de Aplicaciones",
-        text: "El Frontend de SIA (Sistema Integrado de Aplicaciones) conecta los sistemas de la Facultad Tecnológica de Buenos Aires, ofreciendo una interfaz centralizada para estudiantes, docentes y administrativos. Desarrollado con tecnologías modernas como React y Material UI, el sistema garantiza navegación eficiente, accesibilidad y compatibilidad en múltiples dispositivos, integrando procesos académicos y administrativos en una sola plataforma."
+        text: "El Sistema Integrado de Aplicaciones (SIA) de la UTN Buenos Aires gestiona procesos administrativos y académicos con una arquitectura de microservicios, garantizando escalabilidad y seguridad. Integra OAuth 2.0 para autenticación, segmentación de roles y acceso remoto mediante VPN. Sus módulos incluyen Credencial Estudiantil, Gestión de Usuarios y Áreas, Difusiones, Traducciones y Reporte de Incidencias, optimizando la administración y comunicación institucional."
     },
     {
         video: ripAdmin,
@@ -46,6 +48,12 @@ const mobileProjects = [
         video2: ripApp2,
         title: "RIP Alive",
         text: "Aplicación móvil diseñada para permitir a los usuarios guardar su información importante en caso de fallecimiento, con el fin de informar a sus familiares sobre sus últimos deseos. Los usuarios pueden almacenar detalles sobre qué hacer con sus pertenencias, contactos clave, inversiones, información personal y de salud, entre otros. La app cuenta con un sistema de suscripción de pago y una tienda con productos."
+    },
+    {
+        video1: amigosCole1,
+        video2: amigosCole2,
+        title: "Amigos del Cole",
+        text: "Aplicación móvil diseñada como billetera digital para estudiantes, en la que los padres pueden cargar dinero en las cuentas de sus hijos que asisten al colegio. La app permite a los estudiantes realizar compras en los buffets de las escuelas mediante un código QR. Incluye tres roles de usuario: cuentas de padres para administrar el saldo, cuentas de hijos para realizar las compras, y cuentas de buffet para gestionar los pagos recibidos."
     }
 ];
 

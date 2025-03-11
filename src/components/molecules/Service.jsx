@@ -30,7 +30,7 @@ export default function Service({ title, image, serviceList }) {
       <List p={0} spacing={2} textAlign="left">
         {serviceList.map((item, idx) => (
           <ListItem key={idx}>
-            <ListIcon as={CheckCircleIcon} color="tertiary.500" />
+            <ListIcon mb={1} as={CheckCircleIcon} color="tertiary.500" />
             {item}
           </ListItem>
         ))}

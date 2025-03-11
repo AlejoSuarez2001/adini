@@ -136,7 +136,7 @@ export default function Technologies() {
                                 </Text>
                                 <Box h={"1px"} bg={"white"} mb={4} />
                                 <Text fontSize={{ base: "sm", md: "md" }} color="gray.300">
-                                    Creemos aplicaciones móviles nativas y híbridas con Expo y React Native, optimizadas para ofrecer un rendimiento rápido y una experiencia fluida en dispositivos móviles.
+                                    Creamos aplicaciones móviles nativas e híbridas con Expo y React Native, optimizadas tanto para Android como para IOS, ofreciendo un rendimiento rápido y una experiencia fluida en dispositivos móviles.
                                 </Text>
                             </Box>
                         </Flex>

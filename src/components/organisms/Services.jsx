@@ -7,7 +7,7 @@ import { useMemo } from "react";
 
 const services = [
   {
-    title: "Análisis Desarrollo",
+    title: "Análisis y Desarrollo",
     image: "/assets/icons/dev.svg",
     serviceList: [
       "Desarrollo de Aplicaciones Web",
@@ -21,22 +21,22 @@ const services = [
     title: "Business Intelligence",
     image: "/assets/icons/bi.svg",
     serviceList: [
-      "Migración a la Nube",
-      "Administración de Servidores",
-      "Implementación de DevOps",
       "Monitoreo y Soporte",
-      "Optimización de Costos en la Nube",
+      "Diseño e Implementación de ETL",
+      "Control de Flujos de Datos",
+      "Análisis de Datos Mediante Modelos Predictivos",
+      "Creación de Tableros de Inteligencia Empresarial",
     ],
   },
   {
-    title: "DevOps Infraestructura",
+    title: "DevOps e Infraestructura",
     image: "/assets/icons/devops.svg",
     serviceList: [
-      "Asesoría en Transformación Digital",
-      "Optimización de Procesos TI",
-      "Seguridad Informática",
-      "Arquitectura de Software",
-      "Capacitación en Tecnologías",
+      "Integración y Entrega Continua (CI/CD)",
+      "Monitoreo de Sistemas y Aplicaciones",
+      "Bases de datos SQL y NoSQL",
+      "Alta Disponibilidad y Soluciones Escalables",
+      "Administración de Servidores Linux y Windows",
     ],
   },
 ];
