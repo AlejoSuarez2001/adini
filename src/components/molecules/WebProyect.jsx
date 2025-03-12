@@ -56,7 +56,7 @@ export default function WebProyect({ title, summary, description, video, imgs })
             >
                 <Box>
                     <Flex justify="center" align="center" mb={3}>
-                        <Heading fontSize="2xl" fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
+                        <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
                     <Box mb={4} rounded="md" overflow="hidden" boxShadow="md">
                         <video ref={videoRef} autoPlay muted loop style={{ width: "100%", borderRadius: "8px" }}>

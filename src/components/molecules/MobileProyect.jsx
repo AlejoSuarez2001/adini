@@ -69,7 +69,7 @@ export default function MobileProyect({ title, summary, description, video1, vid
             >
                 <Box>
                     <Flex justify="center" align="center" mb={2}>
-                        <Heading fontSize="2xl" fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
+                        <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
                     <Flex w="100%" rounded="md" mb={4} justify="space-between" gap={4}>
                         <Box flex="1" borderRadius="lg" overflow="hidden" boxShadow="md">
