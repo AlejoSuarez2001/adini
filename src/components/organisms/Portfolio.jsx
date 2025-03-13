@@ -186,9 +186,9 @@ const mobileProjects = [
         video1: credencial1,
         video2: credencial2,
         imgs: [
-            '/assets/portfolio/credencial/Credencial 9.png',
             '/assets/portfolio/credencial/Credencial 10.png',
             '/assets/portfolio/credencial/Credencial 11.png',
+            '/assets/portfolio/credencial/Credencial 9.png',
             '/assets/portfolio/credencial/Credencial 12.png',
             '/assets/portfolio/credencial/Credencial 13.png',
             '/assets/portfolio/credencial/Credencial 14.png',
@@ -222,8 +222,8 @@ const mobileProjects = [
         video2: ripApp2,
         title: "RIP Alive",
         imgs: [
-            '/assets/portfolio/rip-app/RIP Alive App 1.png',
             '/assets/portfolio/rip-app/RIP Alive App 2.png',
+            '/assets/portfolio/rip-app/RIP Alive App 1.png',
             '/assets/portfolio/rip-app/RIP Alive App 3.png',
             '/assets/portfolio/rip-app/RIP Alive App 4.png',
             '/assets/portfolio/rip-app/RIP Alive App 5.png',
@@ -266,7 +266,13 @@ const mobileProjects = [
     {
         video1: amigosCole1,
         video2: amigosCole2,
-        imgs: [],
+        imgs: [
+            '/assets/portfolio/amigos-cole/Amigos Cole 5.png',
+            '/assets/portfolio/amigos-cole/Amigos Cole 3.png',
+            '/assets/portfolio/amigos-cole/Amigos Cole 4.png',
+            '/assets/portfolio/amigos-cole/Amigos Cole 1.png',
+            '/assets/portfolio/amigos-cole/Amigos Cole 2.png',
+        ],
         title: "Amigos del Cole",
         summary: "Aplicación móvil diseñada como billetera digital para estudiantes, en la que los padres pueden cargar dinero en las cuentas de sus hijos que asisten al colegio. La app permite a los estudiantes realizar compras en los buffets de las escuelas mediante un código QR. Incluye tres roles de usuario: cuentas de padres para administrar el saldo, cuentas de hijos para realizar las compras, y cuentas de buffet para gestionar los pagos recibidos.",
         description:

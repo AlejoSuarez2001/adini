@@ -58,15 +58,14 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                 <ModalOverlay />
                 <ModalContent
                     my={{ base: "0.5rem", md: "2.5rem" }}
-                    py={{ base: 0, md: 5 }}
-                    px={{ base: 0, md: 10, lg: 8 }}
                     maxW={{ base: "95%", md: "80%" }}
                     maxHeight={{ base: "97%", md: "90%" }}
                     overflowY={"auto"}
+                    bg={"quarter.500"}
                 >
-                    <ModalHeader pb={3} pt={5}>{title}</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody p={0}>
+                    <ModalHeader pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
+                    <ModalCloseButton color={"white"} />
+                    <ModalBody px={{ base: 0, md: 10, lg: 8 }} py={{ base: 0, md: 5 }}>
                         <Box px={8} py={3}>
                             <Text mb={10}>{description}</Text>
                             <Text mb={0}>*Tecnologias*</Text>
@@ -113,7 +112,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
             {isMobile && (
                 <Modal isOpen={isFullscreen} onClose={() => setIsFullscreen(false)} size={"full"}>
                     <ModalOverlay />
-                    <ModalContent bg={"#f2f2f2"}>
+                    <ModalContent bg={"quarter.500"}                    >
                         <ModalCloseButton />
                         <ModalBody p={0}>
                             <Flex height={"100vh"} align={"center"} justify={"center"}>
