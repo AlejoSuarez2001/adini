@@ -4,6 +4,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaExpand } from "react-icons/fa";
 
 export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs }) {
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -70,7 +71,18 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                             <Text mb={10}>{description}</Text>
                             <Text mb={0}>*Tecnologias*</Text>
                         </Box>
-                        <Flex my={8} align={"center"} justify={"center"}>
+                        <Flex position={"relative"} my={8} align={"center"} justify={"center"}>
+                            <IconButton
+                                display={{ base: "inherit", md: "none" }}
+                                position="absolute"
+                                aria-label="Next"
+                                icon={<FaExpand />}
+                                right="15px"
+                                top="15px"
+                                zIndex={2}
+                                onClick={() => setIsFullscreen(true)}
+                                colorScheme="gray"
+                            />
                             <Slider style={{ position: "relative", width: "95%" }} {...settings}>
                                 {imgs.map((img, index) => (
                                     <div key={index} style={{ maxWidth: "1200px" }}>
@@ -78,7 +90,8 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                                             src={img}
                                             alt={`Imagen ${index + 1}`}
                                             objectFit="cover"
-                                            m={2}
+                                            mt={2}
+                                            mb={{ base: 8, sm: 2 }}
                                             borderRadius="md"
                                             mx={"auto"}
                                             cursor={{ base: "pointer", md: "default" }}
@@ -95,8 +108,8 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
             {isMobile && (
                 <Modal isOpen={isFullscreen} onClose={() => setIsFullscreen(false)} size={"full"}>
                     <ModalOverlay />
-                    <ModalContent bg={"black"}>
-                        <ModalCloseButton color={"white"} />
+                    <ModalContent bg={"#f2f2f2"}>
+                        <ModalCloseButton />
                         <ModalBody p={0}>
                             <Flex height={"100vh"} align={"center"} justify={"center"}>
                                 <Slider style={{ position: "relative", width: "100%" }} {...settings}>

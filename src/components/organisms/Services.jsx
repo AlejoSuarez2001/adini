@@ -42,7 +42,7 @@ const services = [
 ];
 
 export default function Services() {
-  const threshold = useMemo(() => (window.innerWidth < 768 ? 0.1 : 0.2), []);
+  const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
