@@ -86,7 +86,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                             <Slider style={{
                                 position: "relative",
                                 width: "95%",
-                                maxWidth: mobile ? "400px" : "auto"
+                                maxWidth: mobile ? "350px" : "auto"
                             }} {...settings}
                             >
                                 {imgs.map((img, index) => (
