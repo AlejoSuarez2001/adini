@@ -103,7 +103,7 @@ export default function MobileProyect({ title, summary, description, video1, vid
                 </Flex>
             </MotionBox>
 
-            <ModalPortfolio isOpen={isOpen} setIsOpen={setIsOpen} title={title} description={description} imgs={imgs} />
+            <ModalPortfolio isOpen={isOpen} setIsOpen={setIsOpen} title={title} description={description} imgs={imgs} mobile={true} />
         </>
     );
 }

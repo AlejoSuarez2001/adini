@@ -159,7 +159,43 @@ const mobileProjects = [
             '/assets/portfolio/rip-app/RIP Alive App 14.png',
         ],
         summary: "Aplicación móvil diseñada para permitir a los usuarios guardar su información importante en caso de fallecimiento, con el fin de informar a sus familiares sobre sus últimos deseos. Los usuarios pueden almacenar detalles sobre qué hacer con sus pertenencias, contactos clave, inversiones, información personal y de salud, entre otros. La app cuenta con un sistema de suscripción de pago y una tienda con productos.",
-        description: (<></>)
+        description:
+            (
+                <div>
+                    <p>
+                        Es el sistema principal de la Universidad Tecnológica Nacional (UTN), Buenos Aires, Argentina. Diseñado para gestionar y optimizar diversos procesos administrativos y académicos. Construido sobre una moderna infraestructura de microservicios, el SIA combina escalabilidad, seguridad y flexibilidad para satisfacer las demandas de una institución de alto nivel.
+                    </p>
+                    <br />
+                    <h4>Características principales:</h4>
+                    <br />
+                    <ul>
+                        <li><strong>Integración con OAuth 2.0:</strong> Utiliza servicios de autenticación para la gestión de usuarios institucionales, asegurando una experiencia segura y centralizada.</li>
+                        <li><strong>Segmentación de roles:</strong> Los usuarios se agrupan por roles, lo que permite una personalización detallada del acceso a recursos y funcionalidades.</li>
+                        <li><strong>Escalabilidad controlada:</strong> El diseño modular y basado en microservicios permite que el sistema crezca de forma eficiente.</li>
+                    </ul>
+                    <br />
+                    <h4>Módulos del Sistema:</h4>
+                    <br />
+                    <ul>
+                        <li><strong>Credencial Estudiantil:</strong> Permite a los alumnos visualizar su información académica y generar un QR verificable.</li>
+                        <li><strong>Gestión de Alias:</strong> Facilita la creación y eliminación de alias institucionales.</li>
+                        <li><strong>Gestión de Áreas:</strong> Administra grupos institucionales con autenticación segmentada.</li>
+                        <li><strong>Módulo de Traducciones:</strong> Optimiza los flujos de trabajo de traducción académica.</li>
+                        <li><strong>Envío de Difusiones:</strong> Comunicación masiva con listas predefinidas de destinatarios.</li>
+                        <li><strong>Gestión de Usuarios:</strong> Administración de usuarios, permisos y accesos.</li>
+                        <li><strong>Módulo de VPN:</strong> Acceso remoto a recursos mediante VPN.</li>
+                        <li><strong>Reporte de Incidencias:</strong> Seguimiento de problemas técnicos con la ticketera institucional.</li>
+                    </ul>
+                    <br />
+                    <p>
+                        El SIA es una herramienta clave para el funcionamiento eficiente de la UTN, diseñada para atender las necesidades de alumnos, docentes y personal administrativo.
+                    </p>
+                    <p>
+                        Link al Sitio:
+                        <a href="https://sia.frba.utn.edu.ar/" target="_blank" style={{ color: "blue" }}> sia.frba.utn.edu.ar</a>
+                    </p>
+                </div >
+            )
     },
     {
         video1: amigosCole1,

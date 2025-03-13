@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaExpand } from "react-icons/fa";
 
-export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs }) {
+export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs, mobile = false }) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -83,7 +83,12 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                                 onClick={() => setIsFullscreen(true)}
                                 colorScheme="gray"
                             />
-                            <Slider style={{ position: "relative", width: "95%" }} {...settings}>
+                            <Slider style={{
+                                position: "relative",
+                                width: "95%",
+                                maxWidth: mobile ? "400px" : "auto"
+                            }} {...settings}
+                            >
                                 {imgs.map((img, index) => (
                                     <div key={index} style={{ maxWidth: "1200px" }}>
                                         <Image
@@ -112,7 +117,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                         <ModalCloseButton />
                         <ModalBody p={0}>
                             <Flex height={"100vh"} align={"center"} justify={"center"}>
-                                <Slider style={{ position: "relative", width: "100%" }} {...settings}>
+                                <Slider style={{ position: "relative", width: mobile ? "80%" : "100%" }} {...settings}>
                                     {imgs.map((img, index) => (
                                         <div key={index} style={{ maxWidth: "1200px" }}>
                                             <Image
