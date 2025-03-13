@@ -269,7 +269,33 @@ const mobileProjects = [
         imgs: [],
         title: "Amigos del Cole",
         summary: "Aplicación móvil diseñada como billetera digital para estudiantes, en la que los padres pueden cargar dinero en las cuentas de sus hijos que asisten al colegio. La app permite a los estudiantes realizar compras en los buffets de las escuelas mediante un código QR. Incluye tres roles de usuario: cuentas de padres para administrar el saldo, cuentas de hijos para realizar las compras, y cuentas de buffet para gestionar los pagos recibidos.",
-        description: (<></>)
+        description:
+            (
+                <div>
+                    <p>
+                        Aplicación que actúa como billetera digital estudiantil desarrollada para simplificar y optimizar la gestión del dinero en el entorno escolar. Diseñada para brindar seguridad y control a los padres, permite realizar cargas de saldo en las cuentas de sus hijos, quienes pueden utilizarlo para comprar en los buffets de sus colegios a través de un sistema de pago con código QR.
+                    </p>
+                    <br />
+                    <h4>Funcionalidades principales:</h4>
+                    <br />
+                    <ul>
+                        <li><strong>Gestión de saldo familiar:</strong> Los padres pueden cargar dinero en las cuentas de sus hijos y monitorear en tiempo real los movimientos y gastos realizados dentro de la aplicación.</li>
+                        <li><strong>Compras rápidas y seguras:</strong> Los estudiantes pueden pagar en los buffets escolares de forma ágil y sin necesidad de efectivo, simplemente escaneando un código QR.</li>
+                        <li><strong>Administración eficiente de pagos:</strong> Los encargados del buffet pueden gestionar fácilmente las transacciones recibidas, verificando los pagos y manteniendo un registro de las compras.</li>
+                        <li><strong>Sistema de roles diferenciados:</strong> La aplicación cuenta con tres tipos de usuarios:
+                            <ul>
+                                <li><strong>Padres:</strong> Administran el saldo y supervisan el uso del dinero.</li>
+                                <li><strong>Estudiantes:</strong> Utilizan la billetera digital para realizar compras.</li>
+                                <li><strong>Buffet:</strong> Gestiona los pagos y verifica las transacciones.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>
+                        Amigos del Cole transforma la manera en que los estudiantes realizan pagos en su colegio, proporcionando a los padres tranquilidad y control, y a los buffets una herramienta moderna para gestionar los cobros de manera eficiente.
+                    </p>
+                </div>
+            )
     }
 ];
 
