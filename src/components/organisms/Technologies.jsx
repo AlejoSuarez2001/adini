@@ -81,6 +81,7 @@ export default function Technologies() {
                 >
                     <img
                         src={"/assets/icons/flechas.png"}
+                        alt="Flechas"
                     />
                 </motion.div>
 

@@ -80,7 +80,7 @@ const webProjects = [
                     </p>
                     <p>
                         Link al Sitio:
-                        <a href="https://sia.frba.utn.edu.ar/" target="_blank" style={{ color: "blue" }}> sia.frba.utn.edu.ar</a>
+                        <a href="https://sia.frba.utn.edu.ar/" target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}> sia.frba.utn.edu.ar</a>
                     </p>
                 </div >
             )

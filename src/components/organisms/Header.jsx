@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 

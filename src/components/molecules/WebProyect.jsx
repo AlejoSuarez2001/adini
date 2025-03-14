@@ -23,12 +23,15 @@ export default function WebProyect({ title, summary, description, video, imgs, t
     }
 
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.addEventListener("ended", handleVideoEnded);
+        const videoElement = videoRef.current;
+
+        if (videoElement) {
+            videoElement.addEventListener("ended", handleVideoEnded);
         }
+
         return () => {
-            if (videoRef.current) {
-                videoRef.current.removeEventListener("ended", handleVideoEnded);
+            if (videoElement) {
+                videoElement.removeEventListener("ended", handleVideoEnded);
             }
         };
     }, []);

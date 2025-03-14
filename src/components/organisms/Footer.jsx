@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
-import { FaInstagram, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
     const information = {
