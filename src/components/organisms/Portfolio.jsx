@@ -29,16 +29,32 @@ const webProjects = [
             '/assets/portfolio/sia/Usuarios.png',
             '/assets/portfolio/sia/VPN.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/css.webp',
+            '/assets/icons/material.webp',
+            '/assets/icons/sql.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/docker.webp',
+            '/assets/icons/php.webp',
+            '/assets/icons/html.webp',
+            '/assets/icons/doctrine.webp',
+            '/assets/icons/sequelize.webp',
+            '/assets/icons/express.webp',
+        ],
         title: "Sistema Integrado de Aplicaciones",
         summary: "El Sistema Integrado de Aplicaciones (SIA) de la UTN Buenos Aires gestiona procesos administrativos y académicos con una arquitectura de microservicios, garantizando escalabilidad y seguridad. Integra OAuth 2.0 para autenticación, segmentación de roles y acceso remoto mediante VPN. Sus módulos incluyen Credencial Estudiantil, Gestión de Usuarios y Áreas, Difusiones, Traducciones y Reporte de Incidencias, optimizando la administración y comunicación institucional.",
         description:
             (
                 <div>
+                    <h4>Proyecto</h4>
+                    <br />
                     <p>
                         Es el sistema principal de la Universidad Tecnológica Nacional (UTN), Buenos Aires, Argentina. Diseñado para gestionar y optimizar diversos procesos administrativos y académicos. Construido sobre una moderna infraestructura de microservicios, el SIA combina escalabilidad, seguridad y flexibilidad para satisfacer las demandas de una institución de alto nivel.
                     </p>
                     <br />
-                    <h4>Funcionalidades principales:</h4>
+                    <h4>Funcionalidades principales</h4>
                     <br />
                     <ul>
                         <li><strong>Integración con OAuth 2.0:</strong> Utiliza servicios de autenticación para la gestión de usuarios institucionales, asegurando una experiencia segura y centralizada.</li>
@@ -82,16 +98,28 @@ const webProjects = [
             '/assets/portfolio/rip-admin/RIP Admin 8.png',
             '/assets/portfolio/rip-admin/RIP Admin 9.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/css.webp',
+            '/assets/icons/chakra.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/mongo.webp',
+            '/assets/icons/html.webp',
+            '/assets/icons/express.webp',
+        ],
         title: "RIP Admin",
         summary: "Aplicación web para la administración de la aplicación móvil 'RIP Alive'. Permite a los administradores visualizar la información de los usuarios, gestionar el estado de las suscripciones y pagos, configurar catálogos de la aplicación, generar cupones de descuento, entre otras funcionalidades.",
         description:
             (
                 <div>
+                    <h4>Proyecto</h4>
+                    <br />
                     <p>
                         RIP Admin es una plataforma web diseñada para la gestión completa de los contenidos y usuarios de RIP Alive, ofreciendo a los administradores un control centralizado y eficiente sobre las funcionalidades y datos de la aplicación. Desarrollada con un enfoque en la productividad y la seguridad, RIP Admin asegura que la operación de la app sea fluida y adaptable a las necesidades de los usuarios finales.
                     </p>
                     <br />
-                    <h4>Funcionalidades principales:</h4>
+                    <h4>Funcionalidades principales</h4>
                     <br />
                     <ul>
                         <li><strong>Gestión de Usuarios:</strong> Control detallado de las cuentas de usuarios, incluyendo la verificación de perfiles, manejo de suscripciones y validación de códigos de invitación. Posibilidad de suspender, habilitar o modificar accesos según sea necesario.</li>
@@ -123,16 +151,30 @@ const webProjects = [
             '/assets/portfolio/pap/PAP 11.png',
             '/assets/portfolio/pap/PAP 12.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/css.webp',
+            '/assets/icons/chakra.webp',
+            '/assets/icons/docker.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/sql.webp',
+            '/assets/icons/sequelize.webp',
+            '/assets/icons/html.webp',
+            '/assets/icons/express.webp',
+        ],
         title: "Paso a Paso",
         summary: "Aplicación web desarrollada para una empresa mayorista, permite visualizar los productos disponibles y añadirlos a un carrito para realizar consultas. Además, incluye un panel de administrador para gestionar productos y configurar aspectos generales de la página.",
         description:
             (
                 <div>
+                    <h4>Proyecto</h4>
+                    <br />
                     <p>
                         Paso a Paso Distribuidora es una plataforma de comercio electrónico diseñada para optimizar la venta mayorista de productos de forma online. Desarrollada con React.js, combina un diseño moderno e intuitivo con funcionalidades avanzadas que simplifican tanto la experiencia del cliente como la gestión administrativa de la empresa.
                     </p>
                     <br />
-                    <h4>Funcionalidades principales:</h4>
+                    <h4>Funcionalidades principales</h4>
                     <br />
                     <ul>
                         <li><strong>E-commerce de Venta Mayorista:</strong> Una tienda online diseñada específicamente para satisfacer las necesidades del comercio mayorista, permitiendo a los clientes explorar y adquirir productos de forma rápida y eficiente.</li>
@@ -157,15 +199,24 @@ const webProjects = [
             '/assets/portfolio/samay/Samay 5.png',
             '/assets/portfolio/samay/Samay 6.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/css.webp',
+            '/assets/icons/html.webp',
+            '/assets/icons/js.webp'
+        ],
         title: "Samay Wayra",
         summary: "Página web desarrollada para una empresa de alquiler de cabañas. Incluye una galería de fotos y una sección de contacto para realizar reservas de alojamiento.",
         description: (
             <div>
+                <h4>Proyecto</h4>
+                <br />
                 <p>
                     Samay Wayra es una web estática creada con el propósito de promocionar un exclusivo servicio de hospedaje vacacional. Diseñada para ofrecer una experiencia visual atractiva y funcional, permite a los visitantes conocer el complejo, sus características y los medios de contacto de manera clara y accesible.
                 </p>
                 <br />
-                <h4>Características principales:</h4>
+                <h4>Características principales</h4>
                 <br />
                 <ul>
                     <li><strong>Diseño minimalista y atractivo:</strong> La estética limpia y amigable de la web busca captar la atención del usuario, transmitiendo una sensación de tranquilidad y confort, alineada con la experiencia que ofrece el hospedaje.</li>
@@ -193,16 +244,30 @@ const mobileProjects = [
             '/assets/portfolio/credencial/Credencial 13.png',
             '/assets/portfolio/credencial/Credencial 14.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/sql.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/expo.webp',
+            '/assets/icons/docker.webp',
+            '/assets/icons/sequelize.webp',
+            '/assets/icons/express.webp',
+            '/assets/icons/ts.webp',
+            '/assets/icons/next.webp',
+        ],
         title: "Credencial Estudiantil",
         summary: "Aplicación móvil diseñada como credencial digital para una universidad. Permite a los estudiantes validarse como alumnos mediante un código QR y facilita el acceso a información útil, como las materias en curso, el historial académico y una agenda detallada con los horarios de cada asignatura. También incluye una sección para descargar la constancia de alumno con su historial académico.",
         description:
             (
                 <div>
+                    <h4>Proyecto</h4>
+                    <br />
                     <p>
                         La Credencial Estudiantil es una aplicación móvil desarrollada para funcionar como una credencial digital para los alumnos de la Universidad Tecnológica Nacional, Buenos Aires, Argentina. Su diseño moderno y funcional está orientado a simplificar la validación de identidad estudiantil y brindar acceso rápido a información académica clave.
                     </p>
                     <br />
-                    <h4>Funcionalidades principales:</h4>
+                    <h4>Funcionalidades principales</h4>
                     <br />
                     <ul>
                         <li><strong>Validación de Identidad con QR:</strong> Los estudiantes pueden generar un código QR dinámico y vencible que certifica su condición de alumno regular, garantizando un proceso seguro y confiable.</li>
@@ -237,16 +302,28 @@ const mobileProjects = [
             '/assets/portfolio/rip-app/RIP Alive App 13.png',
             '/assets/portfolio/rip-app/RIP Alive App 14.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/expo.webp',
+            '/assets/icons/mongo.webp',
+            '/assets/icons/express.webp',
+            '/assets/icons/rc.webp',
+            '/assets/icons/stripe.webp',
+        ],
         summary: "Aplicación móvil diseñada para permitir a los usuarios guardar su información importante en caso de fallecimiento, con el fin de informar a sus familiares sobre sus últimos deseos. Los usuarios pueden almacenar detalles sobre qué hacer con sus pertenencias, contactos clave, inversiones, información personal y de salud, entre otros. La app cuenta con un sistema de suscripción de pago y una tienda con productos.",
         description:
             (
                 (
                     <div>
+                        <h4>Proyecto</h4>
+                        <br />
                         <p>
                             RIP Alive es una innovadora aplicación móvil desarrollada en React Native, diseñada para permitir que los usuarios dejen un legado claro y accesible para sus beneficiarios en caso de fallecimiento. Con un enfoque en la planificación y la seguridad, la aplicación ofrece un entorno organizado y personalizable para gestionar información crucial y deseos personales.
                         </p>
                         <br />
-                        <h4>Funcionalidades principales:</h4>
+                        <h4>Funcionalidades principales</h4>
                         <br />
                         <ul>
                             <li><strong>Legado Personalizado:</strong> Los usuarios pueden registrar toda la información relevante sobre sus datos y pretensiones, asegurando que sus beneficiarios tengan acceso a todo lo necesario de manera clara y estructurada.</li>
@@ -273,16 +350,29 @@ const mobileProjects = [
             '/assets/portfolio/amigos-cole/Amigos Cole 1.png',
             '/assets/portfolio/amigos-cole/Amigos Cole 2.png',
         ],
+        tecnologies: [
+            '/assets/icons/react.webp',
+            '/assets/icons/node.webp',
+            '/assets/icons/sql.webp',
+            '/assets/icons/js.webp',
+            '/assets/icons/expo.webp',
+            '/assets/icons/docker.webp',
+            '/assets/icons/sequelize.webp',
+            '/assets/icons/express.webp',
+            '/assets/icons/mp.webp',
+        ],
         title: "Amigos del Cole",
         summary: "Aplicación móvil diseñada como billetera digital para estudiantes, en la que los padres pueden cargar dinero en las cuentas de sus hijos que asisten al colegio. La app permite a los estudiantes realizar compras en los buffets de las escuelas mediante un código QR. Incluye tres roles de usuario: cuentas de padres para administrar el saldo, cuentas de hijos para realizar las compras, y cuentas de buffet para gestionar los pagos recibidos.",
         description:
             (
                 <div>
+                    <h4>Proyecto</h4>
+                    <br />
                     <p>
                         Aplicación que actúa como billetera digital estudiantil desarrollada para simplificar y optimizar la gestión del dinero en el entorno escolar. Diseñada para brindar seguridad y control a los padres, permite realizar cargas de saldo en las cuentas de sus hijos, quienes pueden utilizarlo para comprar en los buffets de sus colegios a través de un sistema de pago con código QR.
                     </p>
                     <br />
-                    <h4>Funcionalidades principales:</h4>
+                    <h4>Funcionalidades principales</h4>
                     <br />
                     <ul>
                         <li><strong>Gestión de saldo familiar:</strong> Los padres pueden cargar dinero en las cuentas de sus hijos y monitorear en tiempo real los movimientos y gastos realizados dentro de la aplicación.</li>
@@ -314,14 +404,14 @@ export default function Portfolio() {
                 <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", xl: "3xl" }} my={12} color="primary.500">Aplicaciones Web</Heading>
                 <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
                     {webProjects.map((project, index) => (
-                        <WebProyect key={index} video={project.video} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} />
+                        <WebProyect key={index} tecnologies={project.tecnologies} video={project.video} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} />
                     ))}
                 </Flex>
 
                 <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", xl: "3xl" }} my={12} color="primary.500">Aplicaciones Móviles</Heading>
                 <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
                     {mobileProjects.map((project, index) => (
-                        <MobileProyect key={index} video1={project.video1} imgs={project.imgs} video2={project.video2} description={project.description} title={project.title} summary={project.summary} />
+                        <MobileProyect key={index} tecnologies={project.tecnologies} video1={project.video1} imgs={project.imgs} video2={project.video2} description={project.description} title={project.title} summary={project.summary} />
                     ))}
                 </Flex>
             </Box>

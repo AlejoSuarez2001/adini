@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaExpand } from "react-icons/fa";
 
-export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs, mobile = false }) {
+export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs, tecnologies, mobile = false }) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -63,12 +63,23 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                     overflowY={"auto"}
                     bg={"quarter.500"}
                 >
-                    <ModalHeader pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
+                    <ModalHeader fontFamily="Poppins, sans-serif" pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
                     <ModalCloseButton color={"white"} />
-                    <ModalBody px={{ base: 0, md: 10, lg: 8 }} py={{ base: 0, md: 5 }}>
+                    <ModalBody px={{ base: 0, md: 10, lg: 8 }} py={5}>
                         <Box px={8} py={3}>
-                            <Text mb={10}>{description}</Text>
-                            <Text mb={0}>*Tecnologias*</Text>
+                            <Text fontFamily="Poppins, sans-serif" mb={10}>{description}</Text>
+                            <h4 style={{ fontFamily: "Poppins, sans-serif" }}>Tecnologias Utilizadas</h4>
+                            <Flex align={"center"} wrap="wrap" gap={10} mt={9} mb={4}>
+                                {tecnologies.map((tec, index) => (
+                                    <div key={index}>
+                                        <Image
+                                            src={tec}
+                                            alt={`Icon ${index + 1}`}
+                                            boxSize={{ base: "35px", md: "40px", xl: "45px" }}
+                                        />
+                                    </div>
+                                ))}
+                            </Flex>
                         </Box>
                         <Flex position={"relative"} my={8} align={"center"} justify={"center"}>
                             <IconButton

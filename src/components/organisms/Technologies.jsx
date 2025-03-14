@@ -21,6 +21,12 @@ const techStack = [
     { name: "SQL", icon: "/assets/icons/sql.webp" },
     { name: "WordPress", icon: "/assets/icons/wordpress.webp" },
     { name: "TypeScript", icon: "/assets/icons/ts.webp" },
+    { name: "Doctrine", icon: "/assets/icons/doctrine.webp" },
+    { name: "PHP", icon: "/assets/icons/php.webp" },
+    { name: "Stripe", icon: "/assets/icons/stripe.webp" },
+    { name: "Mercado Pago", icon: "/assets/icons/mp.webp" },
+    { name: "Revenue Cat", icon: "/assets/icons/rc.webp" },
+    { name: "AWS", icon: "/assets/icons/aws.webp" },
 ];
 
 const sliderSettings = {

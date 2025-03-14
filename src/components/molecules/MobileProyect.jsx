@@ -7,7 +7,7 @@ import ModalPortfolio from "./ModalPortfolio";
 
 const MotionBox = motion(Flex);
 
-export default function MobileProyect({ title, summary, description, video1, video2, imgs }) {
+export default function MobileProyect({ title, summary, description, video1, video2, imgs, tecnologies }) {
     const videoRef1 = useRef(null);
     const videoRef2 = useRef(null);
     const { ref, inView } = useInView({
@@ -103,7 +103,7 @@ export default function MobileProyect({ title, summary, description, video1, vid
                 </Flex>
             </MotionBox>
 
-            <ModalPortfolio isOpen={isOpen} setIsOpen={setIsOpen} title={title} description={description} imgs={imgs} mobile={true} />
+            <ModalPortfolio isOpen={isOpen} setIsOpen={setIsOpen} title={title} description={description} imgs={imgs} tecnologies={tecnologies} mobile={true} />
         </>
     );
 }
