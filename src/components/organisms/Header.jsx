@@ -21,11 +21,22 @@ export default function Header() {
   return (
     <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} bg="white">
       <Flex justifyContent="space-between" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow="md" borderTop="1.75px solid #071e37">
-        <Box onClick={() => scrollToSection("inicio")} cursor={"pointer"}>
+        <Flex align={"center"} onClick={() => scrollToSection("inicio")} cursor={"pointer"}>
+          <Box
+            width="33px"
+            height="33px"
+            mr={"7px"}
+            mb={"4px"}
+          >
+            <img
+              src="/assets/icons/adini.ico"
+              alt="Adini"
+            />
+          </Box>
           <Text my={0} fontSize="28px" color="#4d45d6" fontFamily="Poppins, sans-serif">
             Adini
           </Text>
-        </Box>
+        </Flex>
 
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
           {['inicio', 'servicios', 'tecnologías', 'proyectos', 'nosotros'].map((section) => (
@@ -103,7 +114,19 @@ export default function Header() {
                   </Button>
 
                   <Divider opacity={1} />
+
                   <Flex align={"center"} justify={"center"}>
+                    <Box
+                      width="30px"
+                      height="30px"
+                      mr={"7px"}
+                      mb={"4px"}
+                    >
+                      <img
+                        src="/assets/icons/adini.ico"
+                        alt="Adini"
+                      />
+                    </Box>
                     <Text my={0} fontSize="25px" color="#4d45d6" fontFamily="Poppins, sans-serif">
                       Adini
                     </Text>
