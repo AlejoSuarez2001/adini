@@ -69,7 +69,7 @@ export default function Technologies() {
 
     return (
         <>
-            <Title title="Herramientas" subtitle="que impulsan tu éxito" mb="50px" />
+            <Title title="Herramientas" subtitle="que potencian tu crecimiento" mb="50px" />
 
             <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4}>
                 <motion.div
