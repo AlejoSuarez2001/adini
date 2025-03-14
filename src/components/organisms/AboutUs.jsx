@@ -40,7 +40,7 @@ const teamMembers = [
         linkedin: "https://www.linkedin.com/in/daniel-alberto-pi%C3%B1ero-104a83119/",
     },
     {
-        name: "Guido Gelván",
+        name: "Guido Gelvan",
         role: "Analyst | Developer",
         image: "/assets/images/guido.png",
         linkedin: "https://www.linkedin.com/in/guido-gelvan-b47070210/",
