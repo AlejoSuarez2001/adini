@@ -63,8 +63,10 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                     overflowY={"auto"}
                     bg={"quarter.500"}
                 >
-                    <ModalHeader fontFamily="Poppins, sans-serif" pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
-                    <ModalCloseButton color={"white"} />
+                    <Box position={"sticky"} top={0} zIndex={10} boxShadow={"sm"}>
+                        <ModalHeader fontFamily="Poppins, sans-serif" pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
+                        <ModalCloseButton color={"white"} />
+                    </Box>
                     <ModalBody px={{ base: 0, md: 10, lg: 8 }} py={5}>
                         <Box px={8} py={3}>
                             <Text fontFamily="Poppins, sans-serif" mb={10}>{description}</Text>
