@@ -14,7 +14,7 @@ export default function Contact() {
   const sendEmail = () => {
     const subject = `Contacto desde la web - ${name}`;
     const body = `Hola, mi nombre es ${name}.%0D%0A%0D%0A${message}`;
-    const mailtoLink = `mailto:contacto@tudominio.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contacto@adini.com.ar?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, "_blank");
   };
 
