@@ -4,51 +4,19 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Service from "../molecules/Service";
 import { useMemo } from "react";
-
-const services = [
-  {
-    title: "Análisis y Desarrollo",
-    image: "/assets/icons/dev.svg",
-    serviceList: [
-      "Desarrollo de Aplicaciones Web",
-      "Desarrollo de E-commerce",
-      "Desarrollo Multiplataforma",
-      "Mantenimiento de Aplicaciones Web",
-      "Implementación de Soluciones Open-Source",
-    ],
-  },
-  {
-    title: "Business Intelligence",
-    image: "/assets/icons/bi.svg",
-    serviceList: [
-      "Monitoreo y Soporte",
-      "Diseño e Implementación de ETL",
-      "Control de Flujos de Datos",
-      "Análisis de Datos Mediante Modelos Predictivos",
-      "Creación de Tableros de Inteligencia Empresarial",
-    ],
-  },
-  {
-    title: "DevOps e Infraestructura",
-    image: "/assets/icons/devops.svg",
-    serviceList: [
-      "Integración y Entrega Continua (CI/CD)",
-      "Monitoreo de Sistemas y Aplicaciones",
-      "Bases de datos SQL y NoSQL",
-      "Alta Disponibilidad y Soluciones Escalables",
-      "Administración de Servidores Linux y Windows",
-    ],
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
+  const { t } = useTranslation();
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
+  const services = t("services.servicios", { returnObjects: true });
+
   return (
     <>
-      <Title title="Soluciones" subtitle="a medida para tu negocio" mt="50px" mb="140px" />
+      <Title title={t("services.titulo")} subtitle={t("services.subtitulo")} mt="50px" mb="140px" />
 
       <motion.div
         ref={ref}
@@ -58,7 +26,7 @@ export default function Services() {
       >
         <Flex justify="center" gap={{ base: 12, xl: 20 }} wrap="wrap" mx={10}>
           {services.map((service, index) => (
-            <Service key={index} title={service.title} image={service.image} serviceList={service.serviceList} />
+            <Service key={index} title={service.titulo} image={service.imagen} serviceList={service.lista} />
           ))}
         </Flex>
       </motion.div>

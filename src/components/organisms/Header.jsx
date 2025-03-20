@@ -1,9 +1,11 @@
 import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useTranslation();
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -17,7 +19,6 @@ export default function Header() {
       onClose();
     }
   };
-
   return (
     <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} bg="white">
       <Flex justifyContent="space-between" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow="md" borderTop="1.75px solid #071e37">
@@ -41,7 +42,7 @@ export default function Header() {
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
           {['inicio', 'servicios', 'tecnologías', 'proyectos', 'nosotros'].map((section) => (
             <Text key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{ color: "tertiary.500", cursor: "pointer" }}>
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {t(`header.${section}`)}
             </Text>
           ))}
         </Flex>
@@ -73,7 +74,7 @@ export default function Header() {
           <DrawerContent bg="white" p={4}>
             <DrawerCloseButton size="lg" color="gray.600" _hover={{ color: "black" }} />
             <DrawerHeader px={6} fontSize="xl" fontWeight="bold" color="gray.700">
-              Menú
+              {t("header.menu")}
             </DrawerHeader>
 
             <Divider opacity={1} mt={2} />
@@ -93,11 +94,11 @@ export default function Header() {
                       transition="0.3s ease-in-out"
                       _hover={{ color: "tertiary.500", transform: "translateX(5px)" }}
                     >
-                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                      {t(`header.${section}`)}
                     </Text>
                   ))}
-
                 </Flex>
+
                 <Box>
                   <Button
                     leftIcon={<HiMail />}

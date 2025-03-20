@@ -1,0 +1,92 @@
+{
+    "header": {
+        "inicio": "Inicio",
+        "servicios": "Servicios",
+        "tecnologías": "Tecnologías",
+        "proyectos": "Proyectos",
+        "nosotros": "Nosotros",
+        "menu": "Menú"
+    },
+    "banner": {
+        "span": "Desarrollo a medida",
+        "titulo": "Transformamos ideas en soluciones informáticas",
+        "subtitulo": "Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.",
+        "boton": "Contáctanos",
+        "reviews": [
+            "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
+            "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
+            "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
+        ]
+    },
+    "services": {
+        "titulo": "Soluciones",
+        "subtitulo": "a medida para tu negocio",
+        "servicios": [
+            {
+                "titulo": "Análisis y Desarrollo",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Desarrollo de Aplicaciones Web",
+                    "Desarrollo de E-commerce",
+                    "Desarrollo Multiplataforma",
+                    "Mantenimiento de Aplicaciones Web",
+                    "Implementación de Soluciones Open-Source"
+                ]
+            },
+            {
+                "titulo": "Business Intelligence",
+                "imagen": "/assets/icons/bi.svg",
+                "lista": [
+                    "Monitoreo y Soporte",
+                    "Diseño e Implementación de ETL",
+                    "Control de Flujos de Datos",
+                    "Análisis de Datos Mediante Modelos Predictivos",
+                    "Creación de Tableros de Inteligencia Empresarial"
+                ]
+            },
+            {
+                "titulo": "DevOps e Infraestructura",
+                "imagen": "/assets/icons/devops.svg",
+                "lista": [
+                    "Integración y Entrega Continua (CI/CD)",
+                    "Monitoreo de Sistemas y Aplicaciones",
+                    "Bases de datos SQL y NoSQL",
+                    "Alta Disponibilidad y Soluciones Escalables",
+                    "Administración de Servidores Linux y Windows"
+                ]
+            }
+        ]
+    },
+    "technologies": {
+        "titulo": "Herramientas",
+        "subtitulo": "que potencian tu crecimiento",
+        "web": {
+            "titulo": "Desarrollo Web",
+            "descripcion": "Desarrollamos sitios web rápidos, interactivos y optimizados para todo tipo de dispositivos, utilizando tecnologías como React, Next.js y Express para ofrecer experiencias de usuario excepcionales y alto rendimiento."
+        },
+        "movil": {
+            "titulo": "Desarrollo Móvil",
+            "descripcion": "Creamos aplicaciones móviles nativas e híbridas con Expo y React Native, optimizadas tanto para Android como para IOS, ofreciendo un rendimiento rápido y una experiencia fluida en dispositivos móviles."
+        }
+    },
+    "portfolio": {
+        "home": "menu",
+        "about": "Sobre nosotros",
+        "contact": "Contacto"
+    },
+    "contact": {
+        "home": "menu",
+        "about": "Sobre nosotros",
+        "contact": "Contacto"
+    },
+    "aboutUs": {
+        "home": "menu",
+        "about": "Sobre nosotros",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "home": "menu",
+        "about": "Sobre nosotros",
+        "contact": "Contacto"
+    }
+}

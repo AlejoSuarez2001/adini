@@ -2,13 +2,8 @@ import { Box, Text, Button, VStack, HStack, Flex } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
+import { useTranslation } from "react-i18next";
 import { FiCode } from "react-icons/fi";
-
-const testimonials = [
-    "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
-    "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
-    "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
-];
 
 const floatingVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -28,6 +23,9 @@ const testimonialVariants = {
 
 export default function BannerSection() {
     const [index, setIndex] = useState(0);
+    const { t } = useTranslation();
+
+    const testimonials = t("banner.reviews", { returnObjects: true });
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -86,14 +84,14 @@ export default function BannerSection() {
                         <HStack spacing={2}>
                             <FiCode size={20} />
                             <Text m={0} fontSize={{ base: "sm", md: "md" }} fontWeight="bold" textTransform="uppercase">
-                                Desarrollo a medida
+                                {t(`banner.span`)}
                             </Text>
                         </HStack>
                         <Text fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold" lineHeight="1.2">
-                            Transformamos ideas en soluciones informáticas
+                            {t(`banner.titulo`)}
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} opacity={0.9}>
-                            Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.
+                            {t(`banner.subtitulo`)}
                         </Text>
                         <Button
                             variant="solid"
@@ -106,7 +104,7 @@ export default function BannerSection() {
                             }}
                             onClick={() => scrollToSection("contacto")}
                         >
-                            Contáctanos
+                            {t(`banner.boton`)}
                         </Button>
                     </VStack>
                     <Flex display={{ base: "none", lg: "flex" }} gap={6} flexDir={"column"} w={"700px"} align={"center"} justify={"center"}>

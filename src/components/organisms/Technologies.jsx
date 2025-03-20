@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 const techStack = [
     { name: "Docker", icon: "/assets/icons/docker.webp" },
@@ -55,6 +56,8 @@ const sliderSettings = {
 };
 
 export default function Technologies() {
+    const { t } = useTranslation();
+
     const getMargin = () => {
         return window.innerWidth <= 780 ? "0" : "0 13%";
     };
@@ -69,7 +72,7 @@ export default function Technologies() {
 
     return (
         <>
-            <Title title="Herramientas" subtitle="que potencian tu crecimiento" mb="50px" />
+            <Title title={t("technologies.titulo")} subtitle={t("technologies.subtitulo")} mb="50px" />
 
             <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4}>
                 <motion.div
@@ -109,11 +112,11 @@ export default function Technologies() {
                             </Box>
                             <Box ml={{ base: 0, md: 6 }} textAlign={{ base: "center", md: "left" }} maxW="500px">
                                 <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={2}>
-                                    Desarrollo Web
+                                    {t("technologies.web.titulo")}
                                 </Text>
                                 <Box h={"1px"} bg={"white"} mb={4} />
                                 <Text fontSize={{ base: "sm", md: "md" }} color="gray.300">
-                                    Desarrollamos sitios web rápidos, interactivos y optimizados para todo tipo de dispositivos, utilizando tecnologías como React, Next.js y Express para ofrecer experiencias de usuario excepcionales y alto rendimiento.
+                                    {t("technologies.web.descripcion")}
                                 </Text>
                             </Box>
                         </Flex>
@@ -139,11 +142,11 @@ export default function Technologies() {
                             </Box>
                             <Box ml={{ base: 0, md: 6 }} textAlign={{ base: "center", md: "right" }} maxW="500px">
                                 <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={2}>
-                                    Desarrollo Móvil
+                                    {t("technologies.movil.titulo")}
                                 </Text>
                                 <Box h={"1px"} bg={"white"} mb={4} />
                                 <Text fontSize={{ base: "sm", md: "md" }} color="gray.300">
-                                    Creamos aplicaciones móviles nativas e híbridas con Expo y React Native, optimizadas tanto para Android como para IOS, ofreciendo un rendimiento rápido y una experiencia fluida en dispositivos móviles.
+                                    {t("technologies.movil.descripcion")}
                                 </Text>
                             </Box>
                         </Flex>

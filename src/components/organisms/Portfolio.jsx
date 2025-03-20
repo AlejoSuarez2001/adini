@@ -12,6 +12,7 @@ import sia from "../../videos/sia.webm";
 import samay from "../../videos/samay.webm";
 import pap from "../../videos/pap.webm";
 import ripAdmin from "../../videos/ripadmin.webm";
+import { useTranslation } from "react-i18next";
 
 const webProjects = [
     {
@@ -396,6 +397,8 @@ const mobileProjects = [
 ];
 
 export default function Portfolio() {
+    const { t } = useTranslation();
+
     return (
         <>
             <Title title="Principales" subtitle="proyectos realizados" mt="130px" mb="40px" />
