@@ -2,7 +2,6 @@ import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, Drawe
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
-import TranslateButton from "../molecules/TranslateButton";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();

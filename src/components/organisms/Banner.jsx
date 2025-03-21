@@ -45,7 +45,7 @@ export default function BannerSection() {
             setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
         }, 4000);
         return () => clearInterval(interval);
-    }, []);
+    }, [testimonials.length]);
 
     return (
         <Box position="relative" overflow="hidden" boxShadow={"md"}>
