@@ -1,7 +1,10 @@
 import { Box, Grid, GridItem, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const { t } = useTranslation();
+
     const information = {
         name: "Adini",
         email: "contacto@adini.com",
@@ -34,34 +37,34 @@ export default function Footer() {
                         {information.name}
                     </Text>
                     <Text fontSize="sm" mt={2} mb={0} maxW={{ base: "auto", md: "450px" }}>
-                        Impulsamos la transformación digital con soluciones tecnológicas a medida, ayudando a empresas a crecer y adaptarse al futuro.
+                        {t("footer.descripcion")}
                     </Text>
                 </GridItem>
 
                 <Divider display={{ base: "inherit", md: "none" }} opacity={.2} my={0} />
 
                 <GridItem>
-                    <Text fontWeight="bold" color="white" mb={3}>Empresa</Text>
+                    <Text fontWeight="bold" color="white" mb={3}>{t("footer.empresa.titulo")}</Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
-                        <Link onClick={() => scrollToSection("servicios")} _hover={{ color: "white" }}>Servicios</Link>
-                        <Link onClick={() => scrollToSection("tecnologías")} _hover={{ color: "white" }}>Tecnologías</Link>
-                        <Link onClick={() => scrollToSection("proyectos")} _hover={{ color: "white" }}>Proyectos</Link>
-                        <Link onClick={() => scrollToSection("nosotros")} _hover={{ color: "white" }}>Nosotros</Link>
+                        <Link onClick={() => scrollToSection("servicios")} _hover={{ color: "white" }}>{t("footer.empresa.servicios")}</Link>
+                        <Link onClick={() => scrollToSection("tecnologías")} _hover={{ color: "white" }}>{t("footer.empresa.tecnologías")}</Link>
+                        <Link onClick={() => scrollToSection("proyectos")} _hover={{ color: "white" }}>{t("footer.empresa.proyectos")}</Link>
+                        <Link onClick={() => scrollToSection("nosotros")} _hover={{ color: "white" }}>{t("footer.empresa.nosotros")}</Link>
 
                     </VStack>
                 </GridItem>
 
                 <GridItem>
-                    <Text fontWeight="bold" color="white" mb={3}>Soporte</Text>
+                    <Text fontWeight="bold" color="white" mb={3}>{t("footer.soporte.titulo")}</Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
-                        <Link href="#" _hover={{ color: "white" }}>Centro de Ayuda</Link>
+                        <Link href="#" _hover={{ color: "white" }}>{t("footer.soporte.ayuda")}</Link>
 
-                        <Link onClick={() => scrollToSection("contacto")} _hover={{ color: "white" }}>Contacto</Link>
+                        <Link onClick={() => scrollToSection("contacto")} _hover={{ color: "white" }}>{t("footer.soporte.contacto")}</Link>
                     </VStack>
                 </GridItem>
 
                 <GridItem>
-                    <Text fontWeight="bold" color="white" mb={3}>Nuestras Redes</Text>
+                    <Text fontWeight="bold" color="white" mb={3}>{t("footer.redes.titulo")}</Text>
                     <HStack justify={{ base: "center", md: "start" }} spacing={4}>
                         {/* <Link href={information.instagram} isExternal>
                             <Icon as={FaInstagram} w={5} h={5} _hover={{ color: "white" }} />
@@ -83,7 +86,7 @@ export default function Footer() {
 
             <Box pb={8}>
                 <Text textAlign={"center"} m={0} fontSize="sm">
-                    © {new Date().getFullYear()} {information.name}. Todos los derechos reservados.
+                    © {new Date().getFullYear()} {information.name}. {t("footer.end")}
                 </Text>
             </Box>
         </Box>

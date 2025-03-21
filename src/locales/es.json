@@ -332,18 +332,38 @@
         }
     },
     "contact": {
-        "home": "menu",
-        "about": "Sobre nosotros",
-        "contact": "Contacto"
+        "titulo": "Contáctanos",
+        "subtitulo": "para poder ayudarte",
+        "descripcion": "Envíanos tu mensaje",
+        "span": "¡Gracias por confiar en nosotros!",
+        "boton": "Enviar"
     },
     "aboutUs": {
-        "home": "menu",
-        "about": "Sobre nosotros",
-        "contact": "Contacto"
+        "titulo": "Nuestro equipo",
+        "subtitulo": "comprometido con tu éxito",
+        "desarrollador": "Desarrollador",
+        "analista": "Analista",
+        "bi": "B.I.",
+        "devops": "DevOps",
+        "sysadmin": "SysAdmin"
     },
     "footer": {
-        "home": "menu",
-        "about": "Sobre nosotros",
-        "contact": "Contacto"
+        "descripcion": "Impulsamos la transformación digital con soluciones tecnológicas a medida, ayudando a empresas a crecer y adaptarse al futuro.",
+        "empresa": {
+            "titulo": "Empresa",
+            "servicios": "Servicios",
+            "tecnologías": "Tecnologías",
+            "proyectos": "Proyectos",
+            "nosotros": "Nosotros"
+        },
+        "soporte": {
+            "titulo": "Soporte",
+            "ayuda": "Centro de Ayuda",
+            "contacto": "Contacto"
+        },
+        "redes": {
+            "titulo": "Nuestras Redes"
+        },
+        "end": "Todos los derechos reservados."
     }
 }

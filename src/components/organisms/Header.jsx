@@ -2,6 +2,7 @@ import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, Drawe
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
+import TranslateButton from "../molecules/TranslateButton";
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,7 +58,7 @@ export default function Header() {
           _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
           onClick={() => scrollToSection("contacto")}
         >
-          contacto@adini.com.ar
+          <Text my={0} fontSize={{ base: "sm", xl: "md" }}>contacto@adini.com.ar</Text>
         </Button>
 
         <IconButton

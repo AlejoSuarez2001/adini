@@ -4,12 +4,14 @@ import { FiSend } from "react-icons/fi";
 import { HiMail } from "react-icons/hi";
 import Title from "../molecules/Title";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { useInView } from 'react-intersection-observer';
 
 export default function Contact() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const { t } = useTranslation();
 
   const sendEmail = () => {
     const subject = `Contacto desde la web - ${name}`;
@@ -25,7 +27,7 @@ export default function Contact() {
 
   return (
     <>
-      <Title title="Contáctanos" subtitle="para poder ayudarte" mt="60px" mb="40px" />
+      <Title title={t("contact.titulo")} subtitle={t("contact.subtitulo")} mt="60px" mb="40px" />
 
       <Flex>
         <motion.div
@@ -49,7 +51,7 @@ export default function Contact() {
               <Flex alignItems="center" mb={6}>
                 <Icon as={HiMail} boxSize={8} color="#6c63ff" mr={4} />
                 <Text my={0} fontSize="xl" fontWeight="bold" color="#071e37">
-                  Envíanos tu mensaje
+                  {t("contact.descripcion")}
                 </Text>
               </Flex>
 
@@ -94,7 +96,7 @@ export default function Contact() {
                 />
                 <Flex justifyContent="space-between" align="center">
                   <Text m={0} fontSize="lg" color="#6c63ff" fontWeight="bold">
-                    ¡Gracias por confiar en nosotros!
+                    {t("contact.span")}
                   </Text>
                   <Button
                     bg="#6c63ff"
@@ -106,7 +108,7 @@ export default function Contact() {
                     borderRadius="md"
                     p={4}
                   >
-                    Enviar
+                    {t("contact.boton")}
                   </Button>
                 </Flex>
               </VStack>

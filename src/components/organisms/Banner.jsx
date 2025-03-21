@@ -2,6 +2,7 @@ import { Box, Text, Button, VStack, HStack, Flex } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
+import TranslateButton from "../molecules/TranslateButton";
 import { useTranslation } from "react-i18next";
 import { FiCode } from "react-icons/fi";
 
@@ -180,7 +181,8 @@ export default function BannerSection() {
                         opacity: 0.6,
                     }}
                 />
-                <WhatsAppIcon position="absolute" bottom={6} right={6} boxSize={12} />
+                <WhatsAppIcon position="absolute" />
+                <TranslateButton position="absolute" />
             </Box>
         </Box >
     );

@@ -1,56 +1,59 @@
 import { Box, Flex, Image, Text, Link } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
 import Title from "../molecules/Title";
-
-const teamMembers = [
-    {
-        name: "Agustín Acevedo",
-        role: "DevOps | Sysadmin",
-        image: "/assets/images/agus.png",
-        linkedin: "https://www.linkedin.com/in/agustinezequielacevedo/",
-    },
-    {
-        name: "Alejo Suarez",
-        role: "Analyst | Developer",
-        image: "/assets/images/ale.png",
-        linkedin: "https://www.linkedin.com/in/alejo-ezequiel-suarez/",
-    },
-    {
-        name: "Gabriel Olivieri",
-        role: " Developer | DevOps",
-        image: "/assets/images/gabi.png",
-        linkedin: "https://www.linkedin.com/in/gabriel-olivieri-38437b1bb/",
-    },
-    {
-        name: "Juan Ignacio Diaz",
-        role: "Developer | B. Intelligence",
-        image: "/assets/images/juani.png",
-        linkedin: "https://www.linkedin.com/in/juan-ignacio-diaz-puig-49ab08231/",
-    },
-    {
-        name: "Gonzalo Suarez",
-        role: "Analyst | Developer",
-        image: "/assets/images/gon.png",
-        linkedin: "https://www.linkedin.com/in/suarez-gonzalo/",
-    },
-    {
-        name: "Daniel Piñero",
-        role: "DevOps | Sysadmin",
-        image: "/assets/images/dani.png",
-        linkedin: "https://www.linkedin.com/in/daniel-alberto-pi%C3%B1ero-104a83119/",
-    },
-    {
-        name: "Guido Gelvan",
-        role: "Analyst | Developer",
-        image: "/assets/images/guido.png",
-        linkedin: "https://www.linkedin.com/in/guido-gelvan-b47070210/",
-    }
-];
+import { useTranslation } from "react-i18next";
 
 export default function AboutUs() {
+    const { t } = useTranslation();
+
+    const teamMembers = [
+        {
+            name: "Agustín Acevedo",
+            role: `${t("aboutUs.devops")} | ${t("aboutUs.sysadmin")}`,
+            image: "/assets/images/agus.png",
+            linkedin: "https://www.linkedin.com/in/agustinezequielacevedo/",
+        },
+        {
+            name: "Alejo Suarez",
+            role: `${t("aboutUs.desarrollador")} | ${t("aboutUs.analista")}`,
+            image: "/assets/images/ale.png",
+            linkedin: "https://www.linkedin.com/in/alejo-ezequiel-suarez/",
+        },
+        {
+            name: "Gabriel Olivieri",
+            role: `${t("aboutUs.desarrollador")} | ${t("aboutUs.devops")}`,
+            image: "/assets/images/gabi.png",
+            linkedin: "https://www.linkedin.com/in/gabriel-olivieri-38437b1bb/",
+        },
+        {
+            name: "Juan Ignacio Diaz",
+            role: `${t("aboutUs.bi")} | ${t("aboutUs.desarrollador")}`,
+            image: "/assets/images/juani.png",
+            linkedin: "https://www.linkedin.com/in/juan-ignacio-diaz-puig-49ab08231/",
+        },
+        {
+            name: "Gonzalo Suarez",
+            role: `${t("aboutUs.desarrollador")} | ${t("aboutUs.analista")}`,
+            image: "/assets/images/gon.png",
+            linkedin: "https://www.linkedin.com/in/suarez-gonzalo/",
+        },
+        {
+            name: "Daniel Piñero",
+            role: `${t("aboutUs.sysadmin")} | ${t("aboutUs.devops")}`,
+            image: "/assets/images/dani.png",
+            linkedin: "https://www.linkedin.com/in/daniel-alberto-pi%C3%B1ero-104a83119/",
+        },
+        {
+            name: "Guido Gelvan",
+            role: `${t("aboutUs.analista")} | ${t("aboutUs.desarrollador")}`,
+            image: "/assets/images/guido.png",
+            linkedin: "https://www.linkedin.com/in/guido-gelvan-b47070210/",
+        }
+    ];
+
     return (
         <>
-            <Title title="Nuestro equipo" subtitle="comprometido con tu éxito" mt="60px" mb="60px" />
+            <Title title={t("aboutUs.titulo")} subtitle={t("aboutUs.subtitulo")} mt="60px" mb="60px" />
 
             <Flex align="center" justify="center">
                 <Box maxW="1200px" textAlign="center" mx={{ base: "20px", md: "50px" }}>

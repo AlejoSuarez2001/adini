@@ -330,5 +330,40 @@
                 }
             }
         }
+    },
+    "contact": {
+        "titulo": "Contact us",
+        "subtitulo": "to assist you",
+        "descripcion": "Send us your message",
+        "span": "Thank you for trusting us!",
+        "boton": "Send"
+    },
+    "aboutUs": {
+        "titulo": "Our team",
+        "subtitulo": "committed to your success",
+        "desarrollador": "Developer",
+        "analista": "Analyst",
+        "bi": "B.I.",
+        "devops": "DevOps",
+        "sysadmin": "SysAdmin"
+    },
+    "footer": {
+        "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",
+        "empresa": {
+            "titulo": "Company",
+            "servicios": "Services",
+            "tecnologías": "Technologies",
+            "proyectos": "Projects",
+            "nosotros": "About Us"
+        },
+        "soporte": {
+            "titulo": "Support",
+            "ayuda": "Help Center",
+            "contacto": "Contact"
+        },
+        "redes": {
+            "titulo": "Our Social Media"
+        },
+        "end": "All rights reserved."
     }
 }
