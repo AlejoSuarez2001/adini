@@ -56,8 +56,6 @@ export default function Home() {
         <Footer />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
         {isTranslateVisible && <TranslateButton position={"fixed"} />}
-
-        <TranslateButton />
       </Box>
     </>
   );
