@@ -3,12 +3,14 @@ import { Text, Flex, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalB
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick-theme.css";
 import { FaExpand } from "react-icons/fa";
 
 export default function ModalPortfolio({ title, description, isOpen, setIsOpen, imgs, tecnologies, mobile = false }) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const isMobile = useBreakpointValue({ base: true, md: false });
+    const { t } = useTranslation();
 
     const NextArrow = ({ onClick }) => (
         <IconButton
@@ -70,7 +72,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                     <ModalBody px={{ base: 0, md: 10, lg: 8 }} py={5}>
                         <Box px={8} py={3}>
                             <Text fontFamily="Poppins, sans-serif" mb={10}>{description}</Text>
-                            <h4 style={{ fontFamily: "Poppins, sans-serif" }}>Tecnologias Utilizadas</h4>
+                            <h4 style={{ fontFamily: "Poppins, sans-serif" }}>{t("portfolio.stacks")}</h4>
                             <Flex align={"center"} wrap="wrap" gap={10} mt={9} mb={4}>
                                 {tecnologies.map((tec, index) => (
                                     <div key={index}>

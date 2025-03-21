@@ -68,5 +68,267 @@
             "titulo": "Mobile Development",
             "descripcion": "We create native and hybrid mobile applications with Expo and React Native, optimized for both Android and iOS, offering fast performance and a smooth experience on mobile devices."
         }
+    },
+    "portfolio": {
+        "titulo": "Main",
+        "subtitulo": "completed projects",
+        "web": "Web Applications",
+        "detalles": "More details",
+        "stacks": "Used Stacks",
+        "proyectosWeb": {
+            "sia": {
+                "titulo": "Integrated Applications System",
+                "resumen": "The Integrated Applications System (SIA) of UTN Buenos Aires manages administrative and academic processes with a microservices architecture, ensuring scalability and security. It integrates OAuth 2.0 for authentication, role segmentation, and remote access via VPN. Its modules include Student Credential, User and Area Management, Broadcasts, Translations, and Incident Reporting, optimizing institutional administration and communication.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "This is the main system of the National Technological University (UTN), Buenos Aires, Argentina. Designed to manage and optimize various administrative and academic processes. Built on a modern microservices infrastructure, SIA combines scalability, security, and flexibility to meet the demands of a high-level institution.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "OAuth 2.0 Integration",
+                            "descripcion": "Uses authentication services for institutional user management, ensuring a secure and centralized experience."
+                        },
+                        {
+                            "titulo": "Role Segmentation",
+                            "descripcion": "Users are grouped by roles, allowing detailed customization of access to resources and functionalities."
+                        },
+                        {
+                            "titulo": "Controlled Scalability",
+                            "descripcion": "The modular and microservices-based design allows the system to grow efficiently."
+                        }
+                    ],
+                    "modulos": "System Modules",
+                    "listaModulos": [
+                        {
+                            "titulo": "Student Credential",
+                            "descripcion": "Allows students to view their academic information and generate a verifiable QR code."
+                        },
+                        {
+                            "titulo": "Alias Management",
+                            "descripcion": "Facilitate the creation and elimination of institutional aliases."
+                        },
+                        {
+                            "titulo": "Area Management",
+                            "descripcion": "Manages institutional groups with segmented authentication."
+                        },
+                        {
+                            "titulo": "Translations Module",
+                            "descripcion": "Optimizes academic translation workflows."
+                        },
+                        {
+                            "titulo": "Broadcast Sending",
+                            "descripcion": "Mass communication with predefined recipient lists."
+                        },
+                        {
+                            "titulo": "User Management",
+                            "descripcion": "Manages users, permissions, and access."
+                        },
+                        {
+                            "titulo": "VPN Module",
+                            "descripcion": "Remote access to resources via VPN."
+                        },
+                        {
+                            "titulo": "Incident Reporting",
+                            "descripcion": "Tracks technical issues with the institutional ticketing system."
+                        }
+                    ],
+                    "conclusion": "SIA is a key tool for the efficient operation of UTN, designed to meet the needs of students, teachers, and administrative staff.",
+                    "link": "Website Link"
+                }
+            },
+            "pap": {
+                "titulo": "Paso a Paso",
+                "resumen": "A web application developed for a wholesale company that allows users to browse available products and add them to a cart for inquiries. It also includes an admin panel for managing products and configuring general site settings.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "Paso a Paso Distributor is an e-commerce platform designed to optimize wholesale product sales online. Developed with React.js, it combines a modern and intuitive design with advanced functionalities that simplify both the customer experience and administrative management of the company.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "Wholesale E-commerce",
+                            "descripcion": "An online store specifically designed to meet the needs of wholesale commerce, allowing customers to browse and purchase products quickly and efficiently."
+                        },
+                        {
+                            "titulo": "Comprehensive Management",
+                            "descripcion": "The platform includes a dedicated admin panel that allows administrators to manage catalogs, categories, and products (add, edit, and delete), as well as update business information such as social media and contact details."
+                        },
+                        {
+                            "titulo": "Sales Optimization",
+                            "descripcion": "Paso a Paso Distributor simplifies the purchasing process for wholesale customers, improving product accessibility and visibility."
+                        },
+                        {
+                            "titulo": "Total Control",
+                            "descripcion": "The admin panel provides easy-to-use tools to keep the store and business information up to date."
+                        }
+                    ],
+                    "conclusion": "Paso a Paso Distributor is the perfect solution for wholesale businesses looking to professionalize their digital presence and maximize sales through a robust, modern, and easy-to-manage platform."
+                }
+            },
+            "ripAdmin": {
+                "titulo": "RIP Admin",
+                "resumen": "Web application for managing the mobile application 'RIP Alive'. Allows administrators to view user information, manage subscription and payment statuses, configure app catalogs, generate discount coupons, among other features.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "RIP Admin is a web platform designed for complete management of content and users in RIP Alive, providing administrators with centralized and efficient control over the app's functionalities and data. Developed with a focus on productivity and security, RIP Admin ensures that the app operates smoothly and is adaptable to end users' needs.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "User Management",
+                            "descripcion": "Detailed control of user accounts, including profile verification, subscription management, and invitation code validation. Ability to suspend, enable, or modify access as needed."
+                        },
+                        {
+                            "titulo": "Content Control",
+                            "descripcion": "Management of data and settings available to users in RIP Alive, including legacy templates, QR code settings, and profile preferences."
+                        },
+                        {
+                            "titulo": "Product Management",
+                            "descripcion": "Management and tracking of the store integrated within the application."
+                        },
+                        {
+                            "titulo": "Activity Tracking",
+                            "descripcion": "Monitoring of active subscriptions, payment history via Mercado Pago, control of the status of shipped products from the store, and generating financial reports."
+                        },
+                        {
+                            "titulo": "User Experience Personalization",
+                            "descripcion": "Management of notifications and direct communication with app users."
+                        }
+                    ],
+                    "conclusion": "RIP Admin is the operational core that ensures the proper functioning of RIP Alive, providing administrators with robust and adaptable tools to maintain an optimal user experience and a scalable system. It offers a centralized view of all activities in RIP Alive, simplifying decision-making, problem-solving, and facilitating administrative tasks for efficient data and functionality management."
+                }
+            },
+            "samay": {
+                "titulo": "Samay Wayra",
+                "resumen": "Website developed for a cabin rental company. It includes a photo gallery and a contact section to make accommodation reservations.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "Samay Wayra is a static website created with the purpose of promoting an exclusive vacation lodging service. Designed to offer an attractive and functional visual experience, it allows visitors to learn about the complex, its features, and contact information in a clear and accessible manner.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "Minimalist and attractive design",
+                            "descripcion": "The clean and user-friendly aesthetics of the website aim to capture the user's attention, conveying a sense of tranquility and comfort aligned with the lodging experience."
+                        },
+                        {
+                            "titulo": "Clear and organized information",
+                            "descripcion": "It presents essential details about the accommodation, including images, location, amenities, and key features to help potential guests make an informed decision."
+                        },
+                        {
+                            "titulo": "Integrated contact form",
+                            "descripcion": "The website facilitates direct communication with the property owner through a simple and intuitive form, enabling quick and efficient inquiries."
+                        },
+                        {
+                            "titulo": "Personalized Experience",
+                            "descripcion": "Management of notifications and direct communication with app users."
+                        }
+                    ],
+                    "conclusion": "Samay Wayra is the gateway for future guests looking for a cozy and well-presented destination on the web. Thanks to its visual focus and ease of use, it allows interested parties to quickly and easily get information and contact the owner."
+                }
+            }
+        },
+        "movil": "Mobile Applications",
+        "proyectosMobile": {
+            "credencial": {
+                "titulo": "Student Credential",
+                "resumen": "Mobile app designed as a digital credential for a university. It allows students to validate their status as students through a QR code and provides access to useful information such as current courses, academic history, and a detailed schedule with the times for each subject. It also includes a section to download the student certificate with their academic history.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "The Student Credential is a mobile app developed to function as a digital credential for students at the National Technological University (UTN), Buenos Aires, Argentina. Its modern and functional design is aimed at simplifying student identity validation and providing quick access to key academic information.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "Identity Validation with QR",
+                            "descripcion": "Students can generate a dynamic, time-limited QR code that certifies their status as regular students, ensuring a secure and reliable process."
+                        },
+                        {
+                            "titulo": "Centralized Academic Information",
+                            "descripcion": "Allows viewing of current courses, academic history with access to a complete record of performance and subjects taken, and an academic schedule that organizes the times of each subject, optimizing time management."
+                        },
+                        {
+                            "titulo": "Certificate Download",
+                            "descripcion": "Enables quick and efficient downloading of a regular student certificate."
+                        },
+                        {
+                            "titulo": "Fast and Secure Access",
+                            "descripcion": "The digital credential replaces the use of physical documents, improving practicality and reducing the risks of loss or forgery."
+                        }
+                    ],
+                    "conclusion": "Student Credential is a comprehensive resource for students, designed to enhance their academic experience and facilitate interaction with university services."
+                }
+            },
+            "ripApp": {
+                "titulo": "RIP Alive",
+                "resumen": "Mobile app designed to allow users to store their important information in case of death, to inform their family members about their last wishes. Users can store details about what to do with their belongings, key contacts, investments, personal and health information, among others. The app features a paid subscription system and a store with products.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "RIP Alive is an innovative mobile app developed in React Native, designed to allow users to leave a clear and accessible legacy for their beneficiaries in the event of death. With a focus on planning and security, the app provides an organized and customizable environment to manage crucial information and personal wishes.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "Personalized Legacy",
+                            "descripcion": "Users can register all relevant information about their data and wishes, ensuring that their beneficiaries have clear and structured access to everything they need."
+                        },
+                        {
+                            "titulo": "Unique Identification",
+                            "descripcion": "Includes a section with a personal QR code that uniquely identifies the user, facilitating identity verification."
+                        },
+                        {
+                            "titulo": "Subscription Management",
+                            "descripcion": "Integration with the Mercado Pago payment gateway for automated subscriptions, including the generation of invitation codes to expand app usage."
+                        },
+                        {
+                            "titulo": "Profile",
+                            "descripcion": "Full control from the user's profile to manage subscription, settings, and profile status."
+                        },
+                        {
+                            "titulo": "Integrated Store",
+                            "descripcion": "A store within the app allows users to make purchases, with tools to track the status of their shipments."
+                        }
+                    ],
+                    "conclusion": "The app has been designed with a scalable and modular approach for Android and iOS, allowing for the addition of new features as future needs arise. It also features an intuitive interface that simplifies the management of data, subscriptions, and purchases from a single location. The integration with Mercado Pago ensures a smooth and automatic payment flow, simplifying the user experience."
+                }
+            },
+            "amigosDelCole": {
+                "titulo": "Amigos del Cole",
+                "resumen": "Mobile app designed as a digital wallet for students, where parents can load money into their children's accounts who attend school. The app allows students to make purchases at school buffets using a QR code. It includes three user roles: parent accounts to manage the balance, student accounts to make purchases, and buffet accounts to manage the payments received.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "An app that serves as a student digital wallet developed to simplify and optimize money management in the school environment. Designed to provide security and control to parents, it allows them to load balance into their children's accounts, who can then use it to make purchases at their school buffets via a QR code payment system.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "Family Balance Management",
+                            "descripcion": "Parents can load money into their children's accounts and monitor real-time transactions and spending within the app."
+                        },
+                        {
+                            "titulo": "Quick and Secure Purchases",
+                            "descripcion": "Students can pay at school buffets quickly and without the need for cash, simply by scanning a QR code."
+                        },
+                        {
+                            "titulo": "Efficient Payment Management",
+                            "descripcion": "Buffet managers can easily manage received transactions, verifying payments and keeping track of purchases."
+                        },
+                        {
+                            "titulo": "Differentiated User Roles System",
+                            "descripcion": "The app has three types of users:",
+                            "subfuncionalidades": [
+                                {
+                                    "titulo": "Parents",
+                                    "descripcion": "Manage the balance and monitor the usage of the money."
+                                },
+                                {
+                                    "titulo": "Students",
+                                    "descripcion": "Use the digital wallet to make purchases."
+                                },
+                                {
+                                    "titulo": "Buffet",
+                                    "descripcion": "Manages payments and verifies transactions."
+                                }
+                            ]
+                        }
+                    ],
+                    "conclusion": "Amigos del Cole transforms the way students make payments at their school, providing parents with peace of mind and control, while offering buffets a modern tool to efficiently manage payments."
+                }
+            }
+        }
     }
 }

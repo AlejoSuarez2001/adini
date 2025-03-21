@@ -41,7 +41,7 @@ export default function Home() {
         <Box id="inicio">
           <Banner />
         </Box>
-        <Box>
+        <Box position={"fixed"} top={0} left={0} zIndex={10000000}>
           <Button mt={4} colorScheme="blue" onClick={changeLanguage}>
             {t("button")}
           </Button>

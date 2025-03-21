@@ -3,12 +3,15 @@ import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import { ViewIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from "react-i18next";
 import ModalPortfolio from "./ModalPortfolio";
 
 const MotionBox = motion(Flex);
 
 export default function WebProyect({ title, summary, description, video, imgs, tecnologies }) {
     const videoRef = useRef(null);
+    const { t } = useTranslation();
+
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.4,
@@ -81,7 +84,7 @@ export default function WebProyect({ title, summary, description, video, imgs, t
                         _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
                         onClick={() => setIsOpen(true)}
                     >
-                        Más detalles
+                        {t("portfolio.detalles")}
                     </Button>
                 </Flex>
             </MotionBox>
