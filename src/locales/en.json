@@ -346,8 +346,8 @@
         "span": "Thank you for trusting us!",
         "boton": "Send",
         "mensajeEnviando": "Sending",
-        "mensajeEnviado": "Message sent successfully",
-        "mensajeNoEnviado": "Message could not be sent"
+        "mensajeEnviado": "Message sent successfully.",
+        "mensajeNoEnviado": "Message could not be sent."
     },
     "aboutUs": {
         "titulo": "Our team",
