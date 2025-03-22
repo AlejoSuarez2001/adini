@@ -14,8 +14,8 @@ export default function Contact() {
   const { t } = useTranslation();
 
   const sendEmail = () => {
-    const subject = `Contacto desde la web - ${name}`;
-    const body = `Hola, mi nombre es ${name}.%0D%0A%0D%0A${message}`;
+    const subject = `${t("contact.mail.encabezado")} - ${name}`;
+    const body = `${t("contact.mail.cuerpo")} ${name}.%0D%0A%0D%0A${message}`;
     const mailtoLink = `mailto:contacto@adini.com.ar?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, "_blank");
   };
@@ -57,7 +57,7 @@ export default function Contact() {
 
               <VStack spacing={4} align="stretch">
                 <Input
-                  placeholder="Tu nombre"
+                  placeholder={t("contact.nombreInput")}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   bg="#f9f9f9"
@@ -69,7 +69,7 @@ export default function Contact() {
                 />
                 <Input
                   type="email"
-                  placeholder="Tu correo electrónico"
+                  placeholder={t("contact.correoInput")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   bg="#f9f9f9"
@@ -80,7 +80,7 @@ export default function Contact() {
                   p={4}
                 />
                 <Textarea
-                  placeholder="Escribe tu mensaje..."
+                  placeholder={t("contact.mensajeInput")}
                   size="md"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

@@ -335,6 +335,13 @@
         "titulo": "Contact us",
         "subtitulo": "to assist you",
         "descripcion": "Send us your message",
+        "nombreInput": "Your name",
+        "correoInput": "Your email",
+        "mensajeInput": "Write your message",
+        "mail": {
+            "encabezado": "Contact from the web",
+            "cuerpo": "Hello, my name is"
+        },
         "span": "Thank you for trusting us!",
         "boton": "Send"
     },

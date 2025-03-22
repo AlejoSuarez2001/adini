@@ -335,6 +335,13 @@
         "titulo": "Contáctanos",
         "subtitulo": "para poder ayudarte",
         "descripcion": "Envíanos tu mensaje",
+        "nombreInput": "Tu nombre",
+        "correoInput": "Tu correo electrónico",
+        "mensajeInput": "Escribe tu mensaje",
+        "mail": {
+            "encabezado": "Contacto desde la web",
+            "cuerpo": "Hola, mi nombre es"
+        },
         "span": "¡Gracias por confiar en nosotros!",
         "boton": "Enviar"
     },
