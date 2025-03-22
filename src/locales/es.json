@@ -337,13 +337,17 @@
         "descripcion": "Envíanos tu mensaje",
         "nombreInput": "Tu nombre",
         "correoInput": "Tu correo electrónico",
+        "telefonoInput": "Tu número de teléfono",
         "mensajeInput": "Escribe tu mensaje",
         "mail": {
             "encabezado": "Contacto desde la web",
             "cuerpo": "Hola, mi nombre es"
         },
         "span": "¡Gracias por confiar en nosotros!",
-        "boton": "Enviar"
+        "boton": "Enviar",
+        "mensajeEnviando": "Enviando",
+        "mensajeEnviado": "Mensaje enviado con éxito",
+        "mensajeNoEnviado": "No se ha podido enviar el mensaje"
     },
     "aboutUs": {
         "titulo": "Nuestro equipo",

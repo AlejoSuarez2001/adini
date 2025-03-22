@@ -337,13 +337,17 @@
         "descripcion": "Send us your message",
         "nombreInput": "Your name",
         "correoInput": "Your email",
+        "telefonoInput": "Your phone number",
         "mensajeInput": "Write your message",
         "mail": {
             "encabezado": "Contact from the web",
             "cuerpo": "Hello, my name is"
         },
         "span": "Thank you for trusting us!",
-        "boton": "Send"
+        "boton": "Send",
+        "mensajeEnviando": "Sending",
+        "mensajeEnviado": "Message sent successfully",
+        "mensajeNoEnviado": "Message could not be sent"
     },
     "aboutUs": {
         "titulo": "Our team",

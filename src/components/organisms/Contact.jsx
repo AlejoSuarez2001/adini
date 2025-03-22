@@ -5,19 +5,41 @@ import { HiMail } from "react-icons/hi";
 import Title from "../molecules/Title";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
+import axios from "axios";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState(null);
   const { t } = useTranslation();
 
-  const sendEmail = () => {
-    const subject = `${t("contact.mail.encabezado")} - ${name}`;
-    const body = `${t("contact.mail.cuerpo")} ${name}.%0D%0A%0D%0A${message}`;
-    const mailtoLink = `mailto:contacto@adini.com.ar?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, "_blank");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMessage(null);
+
+    try {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("name", name);
+      formData.append("phone", phone);
+      formData.append("comments", message);
+
+      await axios.post("https://api-contactos.dev.adini.com.ar/comments/", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      setResponseMessage({ type: "success", text: t("contact.mensajeEnviado") });
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      setResponseMessage({ type: "error", text: t("contact.mensajeNoEnviado") });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const { ref, inView } = useInView({
@@ -55,71 +77,92 @@ export default function Contact() {
                 </Text>
               </Flex>
 
-              <VStack spacing={4} align="stretch">
-                <Input
-                  placeholder={t("contact.nombreInput")}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  bg="#f9f9f9"
-                  color="#071e37"
-                  border="2px solid #e0e0e0"
-                  _focus={{ borderColor: "#6c63ff" }}
-                  borderRadius="md"
-                  p={4}
-                />
-                <Input
-                  type="email"
-                  placeholder={t("contact.correoInput")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  bg="#f9f9f9"
-                  color="#071e37"
-                  border="2px solid #e0e0e0"
-                  _focus={{ borderColor: "#6c63ff" }}
-                  borderRadius="md"
-                  p={4}
-                />
-                <Textarea
-                  placeholder={t("contact.mensajeInput")}
-                  size="md"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  bg="#f9f9f9"
-                  color="#071e37"
-                  resize="vertical"
-                  maxHeight="200px"
-                  minHeight="150px"
-                  border="2px solid #e0e0e0"
-                  _focus={{ borderColor: "#6c63ff" }}
-                  borderRadius="md"
-                  p={4}
-                />
-                <Flex justifyContent="space-between" align="center">
-                  <Text m={0} fontSize="lg" color="#6c63ff" fontWeight="bold">
-                    {t("contact.span")}
-                  </Text>
-                  <Button
-                    bg="#6c63ff"
-                    color="white"
-                    _hover={{ bg: "#5548e2" }}
-                    onClick={sendEmail}
-                    isDisabled={!message.trim() || !name.trim() || !email.trim()}
-                    rightIcon={<Icon as={FiSend} />}
+              <form onSubmit={handleSubmit}>
+                <VStack spacing={4} align="stretch">
+                  <Input
+                    placeholder={t("contact.nombreInput")}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    bg="#f9f9f9"
+                    color="#071e37"
+                    border="2px solid #e0e0e0"
+                    _focus={{ borderColor: "#6c63ff" }}
                     borderRadius="md"
                     p={4}
-                  >
-                    {t("contact.boton")}
-                  </Button>
-                </Flex>
-              </VStack>
+                  />
+                  <Input
+                    type="email"
+                    placeholder={t("contact.correoInput")}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    bg="#f9f9f9"
+                    color="#071e37"
+                    border="2px solid #e0e0e0"
+                    _focus={{ borderColor: "#6c63ff" }}
+                    borderRadius="md"
+                    p={4}
+                  />
+                  <Input
+                    type="tel"
+                    placeholder={t("contact.telefonoInput")}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    bg="#f9f9f9"
+                    color="#071e37"
+                    border="2px solid #e0e0e0"
+                    _focus={{ borderColor: "#6c63ff" }}
+                    borderRadius="md"
+                    p={4}
+                  />
+                  <Textarea
+                    placeholder={t("contact.mensajeInput")}
+                    size="md"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    bg="#f9f9f9"
+                    color="#071e37"
+                    resize="vertical"
+                    maxHeight="200px"
+                    minHeight="150px"
+                    border="2px solid #e0e0e0"
+                    _focus={{ borderColor: "#6c63ff" }}
+                    borderRadius="md"
+                    p={4}
+                  />
+                  <Flex justifyContent="space-between" align="center">
+                    {responseMessage ?
+                      (
+                        <Text pr={3} m={0} color={responseMessage.type === "success" ? "green.500" : "red.500"} fontSize={{ base: "md", md: "lg" }} fontWeight="bold">
+                          {responseMessage.text}
+                        </Text>
+                      ) :
+                      (
+                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color="#6c63ff" fontWeight="bold">
+                          {t("contact.span")}
+                        </Text>
+                      )
+                    }
+                    <Button
+                      bg="#6c63ff"
+                      color="white"
+                      _hover={{ bg: "#5548e2" }}
+                      type="submit"
+                      isDisabled={!message.trim() || !name.trim() || !email.trim() || loading}
+                      rightIcon={<Icon as={FiSend} />}
+                      borderRadius="md"
+                      p={4}
+                    >
+                      {loading ? t("contact.mensajeEnviando") : t("contact.boton")}
+                    </Button>
+                  </Flex>
+                </VStack>
+              </form>
             </Box>
           </Flex>
         </motion.div>
         <Flex display={{ base: "none", lg: "inherit" }} align={"center"} justify={"center"}>
           <Box mx={{ base: "40px", "2xl": "120px" }} w={{ base: 350, xl: 400 }}>
-            <Image
-              src="/assets/icons/contact.svg"
-            />
+            <Image src="/assets/icons/contact.svg" />
           </Box>
         </Flex>
       </Flex>
