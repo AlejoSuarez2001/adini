@@ -1,11 +1,73 @@
-import { Box, Button, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import { Box, Button as ChakraButton, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from 'react';
+import Button from "../molecules/Button";
 
-export default function Header() {
+export default function Header({ variant = "default" }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useTranslation();
+  const [backgroundColor, setBackgroundColor] = useState('linear-gradient(to right, rgba(7, 30, 55, 0.9), rgba(7, 30, 55, 0.5))');
+  const [headerBoxShadow, setHeaderBoxShadow] = useState('');
+  const [contactButtonStyle, setContactButtonStyle] = useState(false);
+  const [logoColor, setLogoColor] = useState('white');
+  const [variantColor, setVariantColor] = useState('white');
+  const [itemsColor, setItemsColor] = useState('white');
+  const [adiniIcon, setAdiniIcon] = useState('/assets/icons/adini-white.ico')
+
+  const getHoverColor = () => {
+    if (variant === "infra") {
+      return "#238b6f";
+    } else {
+      return "#5548e6";
+    };
+  }
+
+  const menuType = {
+    default: ["inicio", "areas", "contacto", "nosotros"],
+    dev: ["inicio", "servicios", "tecnologías", "proyectos", "contacto", "nosotros",],
+    infra: ["inicio", "servicios", "contacto", "nosotros"],
+  };
+
+  const menuItems = menuType[variant]
+
+  const variantType = {
+    dev: "dev",
+    infra: "infra",
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      const section2Offset = 860;
+
+      if (scrollY >= section2Offset) {
+        setBackgroundColor('white');
+        setHeaderBoxShadow('md');
+        setLogoColor(variant === "infra" ? "#238b6f" : '#4d45d6');
+        setVariantColor('gray.700');
+        setItemsColor('gray.700');
+        setAdiniIcon(variant === "infra" ? '/assets/icons/adini-infra.ico' : '/assets/icons/adini.ico');
+        setContactButtonStyle(true);
+      } else {
+        setBackgroundColor('linear-gradient(to right, rgba(7, 30, 55, 0.9), rgba(7, 30, 55, 0.5))');
+        setHeaderBoxShadow('')
+        setLogoColor('white');
+        setVariantColor('white');
+        setItemsColor('white');
+        setAdiniIcon("/assets/icons/adini-white.ico");
+        setContactButtonStyle(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -20,8 +82,8 @@ export default function Header() {
     }
   };
   return (
-    <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} bg="white">
-      <Flex justifyContent="space-between" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow="md" borderTop="1.75px solid #071e37">
+    <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} transition="0.15s ease-in-out" bg={backgroundColor}>
+      <Flex bg={backgroundColor} justifyContent="space-between" transition="0.15s ease-in-out" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow={headerBoxShadow}>
         <Flex align={"center"} onClick={() => scrollToSection("inicio")} cursor={"pointer"}>
           <Box
             width="33px"
@@ -30,36 +92,57 @@ export default function Header() {
             mb={"4px"}
           >
             <img
-              src="/assets/icons/adini.ico"
+              src={adiniIcon}
               alt="Adini"
             />
           </Box>
-          <Text my={0} fontSize="28px" color="#4d45d6" fontFamily="Poppins, sans-serif">
-            Adini
-          </Text>
+          <Flex align="flex-end" gap={2}>
+            <Text
+              my={0}
+              fontSize="28px"
+              color={logoColor}
+              fontFamily="Poppins, sans-serif"
+            >
+              Adini
+            </Text>
+
+            {variantType[variant] && (
+              <Text
+                mb="7px"
+                fontWeight="semibold"
+                color={variantColor}
+                fontSize="11px"
+                letterSpacing="0.025em"
+                textTransform="uppercase"
+
+              >
+                {variantType[variant]}
+              </Text>
+            )}
+          </Flex>
         </Flex>
 
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
-          {['inicio', 'servicios', 'tecnologías', 'proyectos', 'nosotros'].map((section) => (
-            <Text key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{ color: "tertiary.500", cursor: "pointer" }}>
+          {menuItems.map((section) => (
+            <Text color={itemsColor} key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{
+              color: contactButtonStyle ? getHoverColor() : "#d2d1e3",
+              cursor: "pointer",
+            }}>
               {t(`header.${section}`)}
             </Text>
           ))}
         </Flex>
-
         <Button
-          display={{ base: "none", lg: "flex" }}
+          display={{ base: "none", xl: "flex" }}
           leftIcon={<HiMail />}
-          variant="solid"
-          bg="tertiary.500"
-          color="secondary.500"
-          fontSize="md"
-          _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
+          text="contacto@adini.com.ar"
+          variant={variant}
+          fontSize={{ base: "sm", xl: "md" }}
           onClick={() => scrollToSection("contacto")}
-        >
-          <Text my={0} fontSize={{ base: "sm", xl: "md" }}>contacto@adini.com.ar</Text>
-        </Button>
-
+          bg={contactButtonStyle ? "white" : undefined}
+          color={contactButtonStyle ? (variant === "infra" ? "#1f7862" : "#4d45d6") : undefined}
+          _hover={contactButtonStyle ? { transform: "scale(1.05)", bg: "#f0f0f0" } : undefined}
+        />
         <IconButton
           display={{ base: "flex", lg: "none" }}
           icon={<FaBars />}
@@ -67,6 +150,7 @@ export default function Header() {
           aria-label="Open Menu"
           onClick={onOpen}
           fontSize="22px"
+          color={logoColor}
         />
 
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -77,12 +161,12 @@ export default function Header() {
               {t("header.menu")}
             </DrawerHeader>
 
-            <Divider opacity={1} mt={2} />
+            <Divider borderColor="gray.300" opacity={1} mt={2} />
 
             <DrawerBody>
               <Flex direction="column" justify={"space-between"} h={"100%"}>
                 <Flex direction="column" gap={6}>
-                  {["inicio", "servicios", "tecnologías", "proyectos", "nosotros"].map((section) => (
+                  {menuItems.map((section) => (
                     <Text
                       key={section}
                       as="button"
@@ -92,7 +176,7 @@ export default function Header() {
                       fontWeight="medium"
                       color="gray.700"
                       transition="0.3s ease-in-out"
-                      _hover={{ color: "tertiary.500", transform: "translateX(5px)" }}
+                      _hover={{ color: getHoverColor(), transform: "translateX(5px)" }}
                     >
                       {t(`header.${section}`)}
                     </Text>
@@ -102,36 +186,33 @@ export default function Header() {
                 <Box>
                   <Button
                     leftIcon={<HiMail />}
-                    variant="solid"
-                    bg="tertiary.500"
-                    color="white"
-                    fontSize="sm"
-                    w="full"
-                    p={0}
-                    _hover={{ transform: "scale(1.05)", bg: "#5548e6" }}
+                    fontSize={"sm"}
+                    text={"contacto@adini.com.ar"}
+                    variant={variant}
                     onClick={() => scrollToSection("contacto")}
-                  >
-                    contacto@adini.com.ar
-                  </Button>
+                    w="full"
+                  />
 
-                  <Divider opacity={1} />
+                  <Divider borderColor="gray.300" opacity={1} />
 
-                  <Flex align={"center"} justify={"center"}>
-                    <Box
-                      width="30px"
-                      height="30px"
-                      mr={"7px"}
-                      mb={"4px"}
-                    >
-                      <img
-                        src="/assets/icons/adini.ico"
-                        alt="Adini"
-                      />
-                    </Box>
-                    <Text my={0} fontSize="25px" color="#4d45d6" fontFamily="Poppins, sans-serif">
-                      Adini
-                    </Text>
-                  </Flex>
+                  <Box mt={4} textAlign="center">
+                    <Flex align="center" justify="center">
+                      <Box width="30px" height="30px" mr="7px" mb="4px">
+                        <img
+                          src={variant === "infra" ? "/assets/icons/adini-infra.ico" : "/assets/icons/adini.ico"}
+                          alt="Adini"
+                        />
+                      </Box>
+                      <Text
+                        my={0}
+                        fontSize="25px"
+                        color={variant === "infra" ? "#238b6f" : "#4d45d6"}
+                        fontFamily="Poppins, sans-serif"
+                      >
+                        Adini
+                      </Text>
+                    </Flex>
+                  </Box>
                 </Box>
               </Flex>
             </DrawerBody>

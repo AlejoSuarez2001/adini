@@ -2,20 +2,44 @@
     "header": {
         "inicio": "Home",
         "servicios": "Services",
+        "areas": "Service Areas",
         "tecnologías": "Technologies",
         "proyectos": "Portfolio",
         "nosotros": "About Us",
-        "menu": "Menu"
+        "menu": "Menu",
+        "contacto": "Contact"
     },
     "banner": {
-        "span": "Custom Development",
-        "titulo": "We transform ideas into IT solutions",
-        "subtitulo": "We are a multidisciplinary team that supports you from the conception of the idea to its implementation.",
-        "boton": "Contact Us",
+        "span": "IT Consulting",
+        "titulo": "We transform ideas into digital solutions",
+        "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
+        "boton": "Contact us",
         "reviews": [
-            "Working with ADINI for the development of our application was an exceptional experience. Their team demonstrated a high level of professionalism and technical skills.",
-            "They met all the established deadlines, ensuring the project stayed on track with smooth and effective communication at all times.",
-            "It was an excellent experience. They handled the entire process professionally, always attentive and ensuring everything was ready on time."
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+        ]
+    },
+    "bannerDev": {
+        "span": "Development",
+        "titulo": "Custom digital solution development",
+        "subtitulo": "We design and build digital systems that support the evolution and growth of each organization.",
+        "boton": "Contact us",
+        "reviews": [
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+        ]
+    },
+    "bannerInfra": {
+        "span": "Infrastructure",
+        "titulo": "Automated infrastructure and operations for modern, scalable environments",
+        "subtitulo": "We design, implement, and manage infrastructure, data, network, and security environments that ensure continuity, performance, and operational control.",
+        "boton": "Contact us",
+        "reviews": [
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
         ]
     },
     "services": {
@@ -34,7 +58,7 @@
                 ]
             },
             {
-                "titulo": "Business Intelligence",
+                "titulo": "Data Analytics",
                 "imagen": "/assets/icons/bi.svg",
                 "lista": [
                     "Monitoring and Support",
@@ -54,6 +78,24 @@
                     "High Availability and Scalable Solutions",
                     "Linux and Windows Server Administration"
                 ]
+            }
+        ]
+    },
+    "serviceAreas": {
+        "titulo": "Our Specialties",
+        "subtitulo": "that empower your projects",
+        "areas": [
+            {
+                "title": "Software Development",
+                "subtitle": "CUSTOM SOLUTIONS",
+                "description": "We design and develop custom, scalable, and maintainable software solutions, crafted to support the growth and objectives of your organization.",
+                "cta": "View services"
+            },
+            {
+                "title": "Infrastructure & Cloud",
+                "subtitle": "SCALABILITY AND SECURITY",
+                "description": "We implement and manage resilient infrastructures and secure cloud environments, optimized to ensure stability, performance, and operational continuity.",
+                "cta": "View services"
             }
         ]
     },
@@ -223,6 +265,50 @@
                     ],
                     "conclusion": "Samay Wayra is the gateway for future guests looking for a cozy and well-presented destination on the web. Thanks to its visual focus and ease of use, it allows interested parties to quickly and easily get information and contact the owner."
                 }
+            },
+            "moviltrack": {
+                "titulo": "Moviltrack",
+                "resumen": "Moviltrack is a comprehensive solution designed to optimize internal project and resource management, centralizing the company's information. It allows generating reports, extracting metrics, checking profitability, and managing clients, suppliers, products, projects, and more.",
+                "descripcion": {
+                    "titulo": "Project",
+                    "descripcion": "A custom management application developed for the company's internal project administration, with full-featured functionalities including handling quotes, remittances, products, projects, clients, suppliers, and other key elements. The platform includes a role-based system that allows segmented and supervised access according to each user's needs, as well as dashboards that facilitate monitoring of metrics and overall company performance to oversee profitability and support strategic decision-making.",
+                    "funcionalidades": "Main Features",
+                    "listaFuncionalidades": [
+                        {
+                            "titulo": "User Management",
+                            "descripcion": "Detailed control of user accounts, with role and permission assignments, enabling or suspending access, and monitoring each user's activity within the platform."
+                        },
+                        {
+                            "titulo": "Project Management",
+                            "descripcion": "Creation, tracking, and administration of internal projects, assignment of responsible parties and deadlines, and monitoring progress through key performance indicators."
+                        },
+                        {
+                            "titulo": "Client and Supplier Management",
+                            "descripcion": "Centralization of client and supplier information, including contact details, transaction history, and associated documentation."
+                        },
+                        {
+                            "titulo": "Product Management",
+                            "descripcion": "Complete administration of products and services, including inventory, pricing, descriptions, and categorization, with support for reports and downloadable documents."
+                        },
+                        {
+                            "titulo": "Quotes and Remittances Handling",
+                            "descripcion": "Generation and tracking of quotes and remittances, with change history and the possibility to export documents in downloadable formats."
+                        },
+                        {
+                            "titulo": "Dashboards and Metrics",
+                            "descripcion": "Visualization of key company metrics through customizable dashboards, facilitating supervision of projects, products, and user performance."
+                        },
+                        {
+                            "titulo": "Reports and Downloadable Documents",
+                            "descripcion": "Generation of financial, activity, and tracking reports, all available for download in compatible formats for filing and analysis."
+                        },
+                        {
+                            "titulo": "Dark Mode",
+                            "descripcion": "The application features a dark mode, allowing users to work comfortably in low-light environments, enhancing visual experience and reducing eye strain."
+                        }
+                    ],
+                    "conclusion": "Moviltrack is a comprehensive solution that centralizes internal company management, optimizing processes and improving efficiency in administering projects, clients, suppliers, and products. With its reporting tools, dashboards, and user management features, it enables detailed supervision and strategic decision-making based on accurate data."
+                }
             }
         },
         "movil": "Mobile Applications",
@@ -337,7 +423,7 @@
         "descripcion": "Send us your message",
         "nombreInput": "Your name",
         "correoInput": "Your email",
-        "telefonoInput": "Your phone number",
+        "telefonoInput": "Your phone number (optional)",
         "mensajeInput": "Write your message",
         "mail": {
             "encabezado": "Contact from the web",
@@ -352,6 +438,10 @@
     "aboutUs": {
         "titulo": "Our team",
         "subtitulo": "committed to your success",
+        "tituloDev": "Specialists in",
+        "subtituloDev": "software, product, and analytics",
+        "tituloInfra": "Specialists in",
+        "subtituloInfra": "operations, security, and system continuity",
         "desarrollador": "Developer",
         "analista": "Analyst",
         "bi": "B.I.",
@@ -367,10 +457,10 @@
             "proyectos": "Projects",
             "nosotros": "About Us"
         },
-        "soporte": {
-            "titulo": "Support",
-            "ayuda": "Help Center",
-            "contacto": "Contact"
+        "areas": {
+            "titulo": "Service Areas",
+            "desarrollo": "Development",
+            "infra": "Infrastructure"
         },
         "redes": {
             "titulo": "Our Social Media"

@@ -28,6 +28,7 @@ const techStack = [
     { name: "Mercado Pago", icon: "/assets/icons/mp.webp" },
     { name: "Revenue Cat", icon: "/assets/icons/rc.webp" },
     { name: "AWS", icon: "/assets/icons/aws.webp" },
+    { name: "Tailwind", icon: "/assets/icons/tailwind.webp" },
 ];
 
 const sliderSettings = {

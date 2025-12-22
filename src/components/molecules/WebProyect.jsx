@@ -70,7 +70,7 @@ export default function WebProyect({ title, summary, description, video, imgs, t
                         </video>
                     </Box>
                     <Box p={4} pb={0}>
-                        <Text fontSize="md" color="gray.600" mb={4}>{summary}</Text>
+                        <Text fontSize="md" color="gray.700" mb={4}>{summary}</Text>
                     </Box>
                 </Box>
                 <Flex mt={6} justify="flex-end">

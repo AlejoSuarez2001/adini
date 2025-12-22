@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
-import Services from "../organisms/Services";
+import ServiceAreas from "../organisms/ServiceAreas";
 import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
@@ -38,14 +38,8 @@ export default function Home() {
         <Box id="inicio">
           <Banner />
         </Box>
-        <Box id="servicios">
-          <Services />
-        </Box>
-        <Box id="tecnologías">
-          <Technologies />
-        </Box>
-        <Box id="proyectos">
-          <Portfolio />
+        <Box id="areas">
+          <ServiceAreas />
         </Box>
         <Box id="contacto">
           <Contact />

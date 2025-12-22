@@ -10,6 +10,7 @@ import amigosCole1 from "../../videos/amigoscole1.webm";
 import amigosCole2 from "../../videos/amigoscole2.webm";
 import sia from "../../videos/sia.webm";
 import samay from "../../videos/samay.webm";
+import moviltrack from "../../videos/moviltrack.webm";
 import pap from "../../videos/pap.webm";
 import ripAdmin from "../../videos/ripadmin.webm";
 import { useTranslation } from "react-i18next";
@@ -220,6 +221,59 @@ export default function Portfolio() {
                     </ul>
                     <br />
                     <p>{t("portfolio.proyectosWeb.samay.descripcion.conclusion")}
+                    </p>
+                </div>
+            )
+        },
+        {
+            video: moviltrack,
+            imgs: [
+                '/assets/portfolio/moviltrack/Moviltrack 1.png',
+                '/assets/portfolio/moviltrack/Moviltrack 2.png',
+                '/assets/portfolio/moviltrack/Moviltrack 3.png',
+                '/assets/portfolio/moviltrack/Moviltrack 4.png',
+                '/assets/portfolio/moviltrack/Moviltrack 5.png',
+                '/assets/portfolio/moviltrack/Moviltrack 6.png',
+                '/assets/portfolio/moviltrack/Moviltrack 7.png',
+                '/assets/portfolio/moviltrack/Moviltrack 8.png',
+                '/assets/portfolio/moviltrack/Moviltrack 9.png',
+                '/assets/portfolio/moviltrack/Moviltrack 10.png',
+                '/assets/portfolio/moviltrack/Moviltrack 11.png',
+                '/assets/portfolio/moviltrack/Moviltrack 12.png',
+                '/assets/portfolio/moviltrack/Moviltrack 13.png',
+                '/assets/portfolio/moviltrack/Moviltrack 14.png',
+                '/assets/portfolio/moviltrack/Moviltrack 15.png',
+                '/assets/portfolio/moviltrack/Moviltrack 16.png',
+            ],
+            tecnologies: [
+                '/assets/icons/react.webp',
+                '/assets/icons/node.webp',
+                '/assets/icons/css.webp',
+                '/assets/icons/tailwind.webp',
+                '/assets/icons/js.webp',
+                '/assets/icons/mongo.webp',
+                '/assets/icons/html.webp',
+                '/assets/icons/express.webp'
+            ],
+            title: t("portfolio.proyectosWeb.moviltrack.titulo"),
+            summary: t("portfolio.proyectosWeb.moviltrack.resumen"),
+            description: (
+                <div>
+                    <h4>{t("portfolio.proyectosWeb.moviltrack.descripcion.titulo")}</h4>
+                    <br />
+                    <p>{t("portfolio.proyectosWeb.moviltrack.descripcion.descripcion")}</p>
+                    <br />
+                    <h4>{t("portfolio.proyectosWeb.moviltrack.descripcion.funcionalidades")}</h4>
+                    <br />
+                    <ul>
+                        {t("portfolio.proyectosWeb.moviltrack.descripcion.listaFuncionalidades", { returnObjects: true }).map((func, index) => (
+                            <li key={index}>
+                                <strong>{func.titulo}:</strong> {func.descripcion}
+                            </li>
+                        ))}
+                    </ul>
+                    <br />
+                    <p>{t("portfolio.proyectosWeb.moviltrack.descripcion.conclusion")}
                     </p>
                 </div>
             )

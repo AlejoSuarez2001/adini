@@ -24,6 +24,9 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
             zIndex={2}
             onClick={onClick}
             colorScheme="gray"
+            _hover={{ bg: "gray.200" }}
+            bg={'gray.100'}
+            color='gray.700'
             variant="ghost"
         />
     );
@@ -40,6 +43,9 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
             zIndex={2}
             onClick={onClick}
             colorScheme="gray"
+            _hover={{ bg: "gray.200" }}
+            bg={'gray.100'}
+            color='gray.700'
             variant="ghost"
         />
     );
@@ -64,6 +70,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                     maxHeight={{ base: "97%", md: "90%" }}
                     overflowY={"auto"}
                     bg={"quarter.500"}
+                    color="gray.700"
                 >
                     <Box position={"sticky"} top={0} zIndex={10} boxShadow={"sm"}>
                         <ModalHeader fontFamily="Poppins, sans-serif" pr={"60px"} bg={"#5548e6"} color={"white"}>{title}</ModalHeader>
@@ -128,7 +135,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                 <Modal isOpen={isFullscreen} onClose={() => setIsFullscreen(false)} size={"full"}>
                     <ModalOverlay />
                     <ModalContent bg={"quarter.500"}                    >
-                        <ModalCloseButton />
+                        <ModalCloseButton color={'gray.700'} _hover={{bg:'gray.200'}} />
                         <ModalBody p={0}>
                             <Flex height={"100vh"} align={"center"} justify={"center"}>
                                 <Slider style={{ position: "relative", width: mobile ? "80%" : "100%" }} {...settings}>

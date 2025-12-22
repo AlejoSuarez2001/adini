@@ -7,8 +7,12 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import axios from "axios";
+import { Turnstile } from "@marsidev/react-turnstile";
 
-export default function Contact() {
+const WORKER_URL = "https://email-worker.adini.workers.dev";
+const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
+
+export default function Contact({ variant = "default" }) {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,6 +20,8 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState(null);
   const { t } = useTranslation();
+  const [turnstileToken, setTurnstileToken] = useState(null);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,20 +29,37 @@ export default function Contact() {
     setResponseMessage(null);
 
     try {
-      const formData = new FormData();
-      formData.append("email", email);
-      formData.append("name", name);
-      formData.append("phone", phone);
-      formData.append("comments", message);
+      if (!turnstileToken) {
+        throw new Error("Completa el captcha");
+      }
 
-      await axios.post("https://api-contactos.dev.adini.com.ar/comments/", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+      const payload = {
+        to: "contacto@adini.com.ar",
+        subject: `Contacto web - ${name || "Sin nombre"}`,
+        text: [
+          `Nombre: ${name}`,
+          `Email: ${email}`,
+          `Tel: ${phone || "N/D"}`,
+          "",
+          message
+        ].join("\n"),
+        html: null, // opcional: podrías armar HTML
+        turnstileToken
+      };
+
+      await axios.post(WORKER_URL, payload, {
+        headers: { "Content-Type": "application/json" },
       });
 
       setResponseMessage({ type: "success", text: t("contact.mensajeEnviado") });
+      setMessage("");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setTurnstileToken(null);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
-      setResponseMessage({ type: "error", text: t("contact.mensajeNoEnviado") });
+      setResponseMessage({ type: "error", text: error?.response?.data?.error || t("contact.mensajeNoEnviado") });
     } finally {
       setLoading(false);
     }
@@ -49,7 +72,7 @@ export default function Contact() {
 
   return (
     <>
-      <Title title={t("contact.titulo")} subtitle={t("contact.subtitulo")} mt="60px" mb="40px" />
+      <Title title={t("contact.titulo")} subtitle={t("contact.subtitulo")} variant={variant} mt="60px" mb="40px" />
 
       <Flex>
         <motion.div
@@ -71,7 +94,7 @@ export default function Contact() {
               w={"100%"}
             >
               <Flex alignItems="center" mb={6}>
-                <Icon as={HiMail} boxSize={8} color="#6c63ff" mr={4} />
+                <Icon as={HiMail} boxSize={8} color={variant === "infra" ? "#238b6f" : "#6c63ff"} mr={4} />
                 <Text my={0} fontSize="xl" fontWeight="bold" color="#071e37">
                   {t("contact.descripcion")}
                 </Text>
@@ -86,7 +109,8 @@ export default function Contact() {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -98,7 +122,8 @@ export default function Contact() {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -110,7 +135,8 @@ export default function Contact() {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -125,9 +151,17 @@ export default function Contact() {
                     maxHeight="200px"
                     minHeight="150px"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
+                  />
+                  <Turnstile
+                    siteKey={TURNSTILE_SITE_KEY}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onExpire={() => setTurnstileToken(null)}
+                    onError={() => setTurnstileToken(null)}
+                    options={{ theme: "light" }}
                   />
                   <Flex justifyContent="space-between" align="center">
                     {responseMessage ?
@@ -137,17 +171,23 @@ export default function Contact() {
                         </Text>
                       ) :
                       (
-                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color="#6c63ff" fontWeight="bold">
+                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color={variant === "infra" ? "#238b6f" : "#6c63ff"} fontWeight="bold">
                           {t("contact.span")}
                         </Text>
                       )
                     }
                     <Button
-                      bg="#6c63ff"
+                      bg={variant === "infra" ? "#238b6f" : "#6c63ff"}
                       color="white"
-                      _hover={{ bg: "#5548e2" }}
+                      _hover={{ bg: variant === "infra" ? "#1f7862" : "#5548e6" }}
                       type="submit"
-                      isDisabled={!message.trim() || !name.trim() || !email.trim() || loading}
+                      isDisabled={
+                        !message.trim() ||
+                        !name.trim() ||
+                        !email.trim() ||
+                        !turnstileToken ||
+                        loading
+                      }
                       rightIcon={<Icon as={FiSend} />}
                       borderRadius="md"
                       p={4}
