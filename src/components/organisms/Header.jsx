@@ -1,4 +1,4 @@
-import { Box, Button as ChakraButton, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
@@ -67,7 +67,7 @@ export default function Header({ variant = "default" }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [variant]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
