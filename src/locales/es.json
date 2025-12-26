@@ -42,6 +42,87 @@
             "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
         ]
     },
+    "infraServices": {
+        "titulo": "Infraestructura",
+        "subtitulo": "robusta, segura y escalable",
+        "servicios": [
+            {
+                "titulo": "Infraestructura Core y Datacenter",
+                "imagen": "/assets/icons/devops.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Administración de cómputo y virtualización",
+                    "Gestión de almacenamiento (Storage)",
+                    "Mantenimiento de Datacenter",
+                    "Nube híbrida y pública",
+                    "Orquestación y contenedores",
+                    "Alta disponibilidad y replicación (HA)"
+                ]
+            },
+            {
+                "titulo": "Gestión de Datos y Continuidad",
+                "imagen": "/assets/icons/dataManage.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Administración de bases de datos (DBA)",
+                    "Respaldo y recuperación (Backup & DR)",
+                    "Gestión de archivos y colaboración"
+                ]
+            },
+            {
+                "titulo": "Redes y Conectividad",
+                "imagen": "/assets/icons/networking.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Gestión de redes LAN/WAN",
+                    "Infraestructura WiFi",
+                    "Conectividad remota (VPN)",
+                    "DNS y certificados digitales (PKI/SSL)",
+                    "Telefonía IP y comunicaciones unificadas"
+                ]
+            },
+            {
+                "titulo": "Seguridad de la Información",
+                "imagen": "/assets/icons/security.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Firewalls y seguridad perimetral",
+                    "Endpoint security",
+                    "Gestión de identidad y accesos (IAM)"
+                ]
+            },
+            {
+                "titulo": "Monitoreo y Observabilidad",
+                "imagen": "/assets/icons/monitoring.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Monitoreo de disponibilidad y rendimiento",
+                    "Gestión de alertas y capacidad"
+                ]
+            },
+            {
+                "titulo": "Operaciones y Automatización",
+                "imagen": "/assets/icons/automation.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Infraestructura como código (IaC)",
+                    "Gestión del ciclo de vida de aplicaciones",
+                    "Gestión de activos IT (ITAM)"
+                ]
+            },
+            {
+                "titulo": "Soporte y Gestión de Servicios",
+                "imagen": "/assets/icons/support.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Soporte nivel 2 y 3",
+                    "Gestión de proveedores IT",
+                    "Documentación técnica",
+                    "Consultoría y compras de IT"
+                ]
+            }
+        ]
+    },
     "services": {
         "titulo": "Soluciones",
         "subtitulo": "a medida para tu negocio",

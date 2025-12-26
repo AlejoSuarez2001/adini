@@ -42,6 +42,87 @@
             "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
         ]
     },
+    "infraServices": {
+        "titulo": "Infrastructure designed to be",
+        "subtitulo": "robust, secure, and scalable",
+        "servicios": [
+            {
+                "titulo": "Core Infrastructure and Datacenter",
+                "imagen": "/assets/icons/devops.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Compute and virtualization management",
+                    "Storage management",
+                    "Datacenter maintenance",
+                    "Hybrid and public cloud",
+                    "Container orchestration",
+                    "High availability and replication (HA)"
+                ]
+            },
+            {
+                "titulo": "Data Management and Business Continuity",
+                "imagen": "/assets/icons/dataManage.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Database administration (DBA)",
+                    "Backup and disaster recovery (Backup & DR)",
+                    "File management and collaboration"
+                ]
+            },
+            {
+                "titulo": "Networking and Connectivity",
+                "imagen": "/assets/icons/networking.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "LAN/WAN network management",
+                    "WiFi infrastructure",
+                    "Remote connectivity (VPN)",
+                    "DNS and digital certificates (PKI/SSL)",
+                    "IP telephony and unified communications"
+                ]
+            },
+            {
+                "titulo": "Information Security",
+                "imagen": "/assets/icons/security.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Firewalls and perimeter security",
+                    "Endpoint security",
+                    "Identity and access management (IAM)"
+                ]
+            },
+            {
+                "titulo": "Monitoring and Observability",
+                "imagen": "/assets/icons/monitoring.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Availability and performance monitoring",
+                    "Alerting and capacity management"
+                ]
+            },
+            {
+                "titulo": "Operations and Automation",
+                "imagen": "/assets/icons/automation.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Infrastructure as Code (IaC)",
+                    "Application lifecycle management",
+                    "IT asset management (ITAM)"
+                ]
+            },
+            {
+                "titulo": "Support and Service Management",
+                "imagen": "/assets/icons/support.svg",
+                "descripcion": "All yours nigga",
+                "lista": [
+                    "Level 2 and 3 support",
+                    "IT vendor management",
+                    "Technical documentation",
+                    "IT consulting and procurement"
+                ]
+            }
+        ]
+    },
     "services": {
         "titulo": "Solutions",
         "subtitulo": "tailored for your business",

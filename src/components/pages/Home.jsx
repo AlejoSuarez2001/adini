@@ -8,6 +8,7 @@ import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
+import SEO from "../../utils/SEO";
 
 export default function Home() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
@@ -31,6 +32,12 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="ADINI | Software Agency"
+        description="Diseñamos e implementamos soluciones digitales integrales para empresas."
+        canonical="https://adini.com.ar/"
+        image="https://adini.com.ar/assets/images/banner.webp"
+      />
       <Header />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">

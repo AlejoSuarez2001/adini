@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
-import Services from "../organisms/Services";
+import ServicesInfra from "../organisms/ServicesInfra";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
+import SEO from "../../utils/SEO";
 
 export default function Infra() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
@@ -31,13 +32,20 @@ export default function Infra() {
 
   return (
     <>
+      <SEO
+        title="ADINI | Infraestructura IT y Cloud"
+        description="ISoluciones tecnológicas en infraestructura, cloud y servicios IT."
+        canonical="https://adini.com.ar/infra"
+        image="https://adini.com.ar/assets/images/infra.webp"
+      />
+
       <Header variant="infra" />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">
           <Banner variant="infra" />
         </Box>
         <Box id="servicios">
-          <Services variant="infra" />
+          <ServicesInfra variant="infra" />
         </Box>
         <Box id="contacto">
           <Contact variant="infra" />

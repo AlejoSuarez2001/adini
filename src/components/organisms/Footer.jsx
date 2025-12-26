@@ -11,15 +11,15 @@ export default function Footer() {
     const navigateWithScroll = (path) => {
         navigate(path);
         window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+            top: 0,
+            behavior: "smooth",
         });
-      };
+    };
 
     const information = {
         name: "Adini",
         email: "contacto@adini.com",
-        instagram: "https://www.instagram.com/adini",
+        instagram: "https://www.instagram.com/adini.solutions/",
         linkedin: "https://www.linkedin.com/company/adiniar",
         facebook: "https://www.facebook.com/profile.php?id=61581291992126",
     };
