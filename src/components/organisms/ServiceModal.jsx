@@ -18,8 +18,17 @@ import {
     MdElectricalServices,
     MdBuild,
 } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+
+const iconMap = {
+    MdBuild,
+    MdPlumbing,
+    MdElectricalServices,
+};
 
 export default function ServiceModal({ isOpen, onClose, service, variant }) {
+    const { t } = useTranslation();
+
     return (
         <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
             <ModalOverlay />
@@ -37,7 +46,7 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                 <ModalHeader pb={0}>
                     <Text mb={0} fontSize="md" color={variant === "infra" ? "#238b6f" : "#4d45d6"} fontWeight="600">
-                        {"Fijate q le inventas aca"}
+                        {"Adini | Infrastructure"}
                     </Text>
                     <Text mb={0} fontSize="3xl" fontWeight="semibold" color="gray.800">
                         {service.titulo}
@@ -51,27 +60,16 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                     <Divider borderColor="gray.300" mb={6} />
 
-                    {/* Estos habria q agregarlos en los es.json y en.json*/}
                     <Flex wrap="wrap" gap={6}>
-                        <ServiceItem
-                            icon={MdBuild}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-                        />
-                        <ServiceItem
-                            icon={MdPlumbing}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-
-                        />
-                        <ServiceItem
-                            icon={MdElectricalServices}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-                        />
+                        {service.detalles?.map((detalle, index) => (
+                            <ServiceItem
+                                key={index}
+                                icon={iconMap[detalle.icono]}
+                                title={detalle.titulo}
+                                description={detalle.descripcion}
+                                variant={variant}
+                            />
+                        ))}
                     </Flex>
                     <Divider borderColor="gray.300" mb={3} />
 
@@ -85,7 +83,7 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
                         _hover={{ backgroundColor: "#1c334d" }}
                         px={8}
                     >
-                        Cerrar
+                        {t("infraServices.cerrar")}
                     </Button>
                 </ModalFooter>
             </ModalContent>

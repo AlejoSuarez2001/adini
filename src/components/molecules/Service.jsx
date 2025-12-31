@@ -1,16 +1,22 @@
 import { Box, Flex, Heading, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
+import { LuArrowRight } from "react-icons/lu";
 import { useDisclosure } from "@chakra-ui/react";
 import ServiceModal from "../organisms/ServiceModal";
+import { useTranslation } from "react-i18next";
 
 export default function Service({ service, variant }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useTranslation();
 
   return (
     <>
       <Box
+        role="group"
+        position="relative"
         onClick={onOpen}
         p={6}
+        pb={10}
         boxShadow="lg"
         borderRadius="md"
         bg="linear-gradient(to top, white, #f7f8ff)"
@@ -20,7 +26,13 @@ export default function Service({ service, variant }) {
         textAlign="center"
         borderBottom={variant === "infra" ? "4px solid #238b6f" : "4px solid #6c63ff"}
         transition="transform 0.2s ease-in-out"
-        _hover={{ transform: "translateY(-5px)", cursor: "pointer", bg: variant === "infra" ? "linear-gradient(to top, #f0fcf9, #f7f8ff)" : "linear-gradient(to top, #f1f0ff, #f7f8ff)" }}
+        _hover={{
+          transform: "translateY(-5px)",
+          cursor: "pointer",
+          bg: variant === "infra"
+            ? "linear-gradient(to top, #f0fcf9, #f7f8ff)"
+            : "linear-gradient(to top, #f1f0ff, #f7f8ff)"
+        }}
         mb={"80px"}
       >
         <Flex justify={"center"} align={"center"}>
@@ -41,6 +53,27 @@ export default function Service({ service, variant }) {
             </ListItem>
           ))}
         </List>
+        <Box
+          position="absolute"
+          right="16px"
+          bottom="12px"
+          display="flex"
+          alignItems="center"
+          gap={1}
+          fontSize="sm"
+          color={variant === "infra" ? "#238b6f" : "#6c63ff"}
+          opacity={0}
+          transform="translateX(-4px)"
+          transition="all 0.2s ease"
+          pointerEvents="none"
+          _groupHover={{
+            opacity: 1,
+            transform: "translateX(0)",
+          }}
+        >
+          {t("infraServices.verMas")}
+          <Box as={LuArrowRight} />
+        </Box>
       </Box>
       <ServiceModal service={service} isOpen={isOpen} onClose={onClose} variant={variant} />
     </>
