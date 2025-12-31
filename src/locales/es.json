@@ -125,41 +125,61 @@
             }
         ]
     },
-    "services": {
+    "devServices": {
         "titulo": "Soluciones",
         "subtitulo": "a medida para tu negocio",
         "servicios": [
             {
-                "titulo": "Análisis y Desarrollo",
+                "titulo": "Soluciones Web Simples",
                 "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Desarrollo de Aplicaciones Web",
-                    "Desarrollo de E-commerce",
-                    "Desarrollo Multiplataforma",
-                    "Mantenimiento de Aplicaciones Web",
-                    "Implementación de Soluciones Open-Source"
+                    "Tu página web lista rápido",
+                    "Diseño profesional y atractivo",
+                    "Plantillas listas o personalizadas",
+                    "Costo accesible y transparente"
                 ]
             },
             {
-                "titulo": "Análisis de Datos",
-                "imagen": "/assets/icons/bi.svg",
+                "titulo": "Desarrollo a Medida",
+                "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Monitoreo y Soporte",
-                    "Diseño e Implementación de ETL",
-                    "Control de Flujos de Datos",
-                    "Análisis de Datos Mediante Modelos Predictivos",
-                    "Creación de Tableros de Inteligencia Empresarial"
+                    "Soluciones adaptadas a tu negocio",
+                    "Procesos claros y organizados",
+                    "Funcionalidades únicas según necesidad",
+                    "Escalable y mantenible",
+                    "Presupuesto ajustado a tu proyecto"
                 ]
             },
             {
-                "titulo": "DevOps e Infraestructura",
-                "imagen": "/assets/icons/devops.svg",
+                "titulo": "Desarrollo Mobile",
+                "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Integración y Entrega Continua (CI/CD)",
-                    "Monitoreo de Sistemas y Aplicaciones",
-                    "Bases de datos SQL y NoSQL",
-                    "Alta Disponibilidad y Soluciones Escalables",
-                    "Administración de Servidores Linux y Windows"
+                    "Apps móviles para tus clientes",
+                    "Interfaz amigable y funcional",
+                    "Integración con tus sistemas existentes",
+                    "Disponible para iOS y Android"
+                ]
+            },
+            {
+                "titulo": "Servicios Complementarios",
+                "imagen": "/assets/icons/support.svg",
+                "lista": [
+                    "Optimización y mejoras de tus sistemas",
+                    "Integración con otras herramientas",
+                    "Consultoría para decisiones tecnológicas",
+                    "Soporte técnico confiable",
+                    "Planes flexibles de mantenimiento"
+                ]
+            },
+            {
+                "titulo": "Implementación de Soluciones de Código Abierto",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Aprovecha soluciones maduras y gratuitas",
+                    "Implementación rápida y profesional",
+                    "Personalización según tu negocio",
+                    "Integración sin complicaciones",
+                    "Soporte y actualizaciones incluidas"
                 ]
             }
         ]
@@ -189,6 +209,58 @@
         "title": "Ideas y Novedades en IT",
         "subtitle": "Compartimos conocimiento sobre desarrollo, infraestructura y el futuro digital.",
         "boton": "Leer artículo"
+    },
+    "cases": {
+        "titulo": "Desafíos reales,",
+        "subtitulo": "resultados reales",
+        "etiquetaResultado": "Resultado Clave",
+        "items": [
+            {
+                "id": 1,
+                "cliente": "Universidad Tecnológica Nacional",
+                "titulo": "Sistema de Difusiones Institucional",
+                "descripcion": "Diseñamos y desarrollamos un sistema propio de difusiones institucionales para la UTN, reemplazando software de terceros de origen no certificado, inseguro y con costos recurrentes. La solución centralizó las comunicaciones oficiales, mejoró el control y seguimiento de los envíos y eliminó riesgos de seguridad.",
+                "resultado": "Software Propio y Seguro",
+                "tecnologias": [
+                    "Node.js",
+                    "React",
+                    "Material UI",
+                    "Docker",
+                    "SMTP",
+                    "PHP"
+                ],
+                "link": "/casos/utn-difusiones"
+            },
+            {
+                "id": 2,
+                "cliente": "Secretaría de Ciencia y Tecnología – UTN",
+                "titulo": "SICYT: Gestión Integral de Proyectos e Investigadores",
+                "descripcion": "Desarrollamos el sistema SICYT para digitalizar y centralizar la gestión de proyectos e investigadores, reemplazando procesos manuales basados en Excel y Microsoft Access. Se logró una gestión centralizada, auditable y consistente de la información científica.",
+                "resultado": "Gestión Centralizada y Auditable",
+                "tecnologias": [
+                    "React",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Docker",
+                    "Keycloak (Auth)"
+                ],
+                "link": "/casos/utn-sicyt"
+            },
+            {
+                "id": 3,
+                "cliente": "Universidad Tecnológica Nacional",
+                "titulo": "Infraestructura de Virtualización con OpenNebula",
+                "descripcion": "Implementamos OpenNebula como plataforma principal de virtualización, reemplazando soluciones fragmentadas y costosas. La nueva infraestructura permitió centralizar la operación, mejorar el control y optimizar el uso de recursos para entornos académicos y de investigación.",
+                "resultado": "Control y Autonomía Operativa",
+                "tecnologias": [
+                    "OpenNebula",
+                    "Linux",
+                    "Virtualización",
+                    "Infraestructura On-Prem"
+                ],
+                "link": "/casos/utn-opennebula"
+            }
+        ]
     },
     "technologies": {
         "titulo": "Herramientas",
